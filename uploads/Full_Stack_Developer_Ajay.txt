@@ -1,0 +1,51 @@
+
+Ajay Duraisamy
+Email: ajayduraisamy@gmail.com
+Phone: +91 7373327552
+
+CAREER OBJECTIVE:
+A challenging and progressive career with an organization where my technical knowledge along with team management skills and detailed knowledge will contribute to the organization’s growth.
+
+SKILLS:
+Languages: PHP, Python
+Databases: MySQL, MongoDB
+Web Servers: Apache
+IDE: Visual Studio Code
+Libraries: React JS
+Web Technologies: HTML, CSS, JavaScript
+Version Control: GitHub
+Frameworks: Express JS, Flask, Bootstrap
+Services: Restful API
+Environment: XAMPP, Node JS
+
+PROFESSIONAL EXPERIENCE:
+Company: Aislyn Technologies, Bangalore
+Role: Software Developer
+Duration: Jan 2023 – Present
+Client: Titus Solutions
+Projects:
+1. School Management System
+   - Managed student, staff, and parent information
+   - Handled attendance using RFID and APIs
+   - Developed reports and notification systems
+2. E-Commerce Platform
+   - Developed admin and user modules
+   - Implemented project ordering and download system
+   - Provided end-to-end support and enhancements
+
+EDUCATION:
+Bachelor of Engineering (Mechanical Engineering), Nandha Engineering College, Erode, 74%, 2017-2021
+Higher Secondary Certificate, Government Higher Secondary School, Vellankovil, 70%, 2017
+SSLC, Government Higher Secondary School, Vellankovil, 86%, 2015
+
+PERSONAL INFORMATION:
+Date of Birth: 30/09/1999
+Gender: Male
+Marital Status: Unmarried
+Languages Known: Tamil, English, Telugu
+Nationality: Indian
+
+DECLARATION:
+I hereby declare that the information furnished above is true to the best of my knowledge.
+
+(Ajay D)

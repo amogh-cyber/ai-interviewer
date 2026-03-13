@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create Meeting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+            
+        }
+
+        .sidebar {
+            height: 130vh;
+            background: #212529;
+            color: white;
+            
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: #adb5bd;
+            text-decoration: none;
+            display: block;
+            padding: 12px 20px;
+            border-radius: 6px;
+            margin: 4px 10px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #343a40;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+        
+            <div class="col-md-3 sidebar">
+                <h4 class="text-center mb-4">Admin Panel</h4>
+
+                <a href="{{ url_for('admin_dashboard') }}">
+                    📊 Dashboard
+                </a>
+
+                <a href="{{ url_for('admin_users') }}">
+                    👥 Users
+                </a>
+
+                <a href="{{ url_for('admin_interviews') }}">
+                    📄 Interview Results
+                </a>
+
+                <a href="{{ url_for('admin_create_meeting') }}" class="active">
+                    🎥 Create Meeting
+                </a>
+
+                <hr class="text-secondary mx-3">
+
+                <a href="{{ url_for('logout') }}" class="text-danger">
+                    🚪 Logout
+                </a>
+            </div>
+
+            
+            <div class="col-md-9 p-4">
+
+                <div class="card p-4 shadow-sm">
+                    <h3 class="mb-4">Admin – Create Meeting</h3>
+
+                
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Meeting Password</label>
+                            <input type="text" name="password" class="form-control" required>
+                        </div>
+
+                        <button class="btn btn-primary">
+                            Create Meeting
+                        </button>
+                    </form>
+
+                    
+                    {% if room_id %}
+                    <hr>
+
+                    <div class="alert alert-success mt-3">
+                        <h5 class="mb-3">Meeting Created Successfully 🎉</h5>
+
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Meeting Link</strong></label>
+                            <input id="meetingLink" type="text" class="form-control" value="{{ meeting_link }}"
+                                readonly>
+                        </div>
+</div>
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Room ID</strong></label>
+                            <input id="meetingRoomId" type="text" class="form-control" value="{{ room_id }}" readonly>
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Password</strong></label>
+                            <input id="meetingPassword" type="text" class="form-control" value="{{ password }}"
+                                readonly>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="button" onclick="copyInvite()" class="btn btn-primary">
+                                📋 Copy Invite
+                            </button>
+
+                            <a href="{{ meeting_link }}" class="btn btn-success">
+                                Join as Admin
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function copyInvite() {
+            const link = document.getElementById("meetingLink").value;
+            const password = document.getElementById("meetingPassword").value;
+
+            const inviteText =
+                `Meeting Link: ${link}\nPassword: ${password}`;
+
+            navigator.clipboard.writeText(inviteText)
+                .then(() => alert("Meeting invite copied! 📋"))
+                .catch(() => alert("Copy failed"));
+        }
+    </script>
+
+</body>
+
+</html>

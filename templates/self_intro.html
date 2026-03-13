@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+
+        <div class="glass-card">
+
+            
+            <div class="card-header gradient-header">
+                <h4 class="mb-0">
+                    🎥 Self Introduction – {{ role }}
+                </h4>
+            </div>
+
+            <div class="card-body p-4 text-center">
+
+                
+                <video id="video" autoplay muted width="100%" class="video-box"></video>
+                <canvas id="canvas" hidden></canvas>
+
+                
+                <div class="mt-4">
+                    <button id="recordBtn" class="btn btn-primary btn-lg px-5">
+                        🎙 Start Introduction (30s)
+                    </button>
+                </div>
+
+            
+                <div id="timerBox" class="mt-3" style="display:none">
+                    <span class="timer-badge">
+                        ⏱ Time Left: <span id="timer">30</span>s
+                    </span>
+                </div>
+
+                
+                <div id="transcriptBox" class="glass-subcard mt-4 text-start" style="display:none; min-height:120px">
+                </div>
+
+            
+                <div id="aiFeedback" class="glass-subcard mt-3 text-start" style="display:none">
+                </div>
+
+                
+                <a href="/interview" id="startInterviewBtn" class="btn btn-success btn-lg mt-4" style="display:none">
+                    🚀 Start Interview
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    
+
+    .glass-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px var(--shadow-color);
+        overflow: hidden;
+    }
+
+    .gradient-header {
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        color: white;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .video-box {
+        border-radius: 15px;
+        box-shadow: 0 10px 25px var(--shadow-color);
+    }
+
+    .timer-badge {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.15);
+        color: #f59e0b;
+        font-size: 1.1rem;
+        padding: 8px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+    }
+
+    .glass-subcard {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 1rem;
+        color: var(--text-dark);
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        border: none;
+        border-radius: 14px;
+        font-weight: 600;
+    }
+
+    .btn-success {
+        border-radius: 14px;
+        font-weight: 600;
+    }
+
+    #aiFeedback ul {
+        padding-left: 1.2rem;
+    }
+
+    #aiFeedback li {
+        margin-bottom: 0.4rem;
+    }
+</style>
+
+<script>
+    let recognition;
+    let finalTranscript = "";
+    let isRecording = false;
+    let timeLeft = 30;
+    let timerInterval = null;
+
+    
+    async function startCamera() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({
+                video: true,
+                audio: true
+            });
+            document.getElementById("video").srcObject = stream;
+        } catch (err) {
+            alert("Camera / Microphone permission denied");
+        }
+    }
+
+    
+    function initSpeech() {
+        const SpeechRecognition =
+            window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (!SpeechRecognition) {
+            alert("Speech Recognition not supported. Use Chrome.");
+            return;
+        }
+
+        recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;   
+        recognition.lang = "en-US";
+
+        recognition.onresult = (event) => {
+            let interimText = "";
+
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+                if (event.results[i].isFinal) {
+                    finalTranscript += event.results[i][0].transcript + " ";
+                } else {
+                    interimText += event.results[i][0].transcript;
+                }
+            }
+
+            const box = document.getElementById("transcriptBox");
+            box.style.display = "block";
+            box.innerHTML = `
+            
+            <em style="opacity:0.6">Listening: ${interimText}</em>
+        `;
+        };
+
+        recognition.onend = () => {
+            stopTimer();
+
+            if (!isRecording) return;
+            isRecording = false;
+
+            analyzeIntro(finalTranscript.trim());
+        };
+    }
+
+
+    function startTimer() {
+        timeLeft = 30;
+        document.getElementById("timer").innerText = timeLeft;
+        document.getElementById("timerBox").style.display = "block";
+
+        clearInterval(timerInterval);
+
+        timerInterval = setInterval(() => {
+            timeLeft--;
+
+            if (timeLeft <= 0) {
+                timeLeft = 0;
+                document.getElementById("timer").innerText = "0";
+                clearInterval(timerInterval);
+                recognition.stop(); 
+                return;
+            }
+
+            document.getElementById("timer").innerText = timeLeft;
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        document.getElementById("timerBox").style.display = "none";
+    }
+
+
+    function analyzeIntro(text) {
+        if (!text) {
+            alert("No speech detected.");
+            resetButton();
+            return;
+        }
+
+        fetch("/analyze_intro", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text })
+        })
+            .then(res => res.json())
+            .then(data => {
+                const fb = document.getElementById("aiFeedback");
+                fb.style.display = "block";
+
+                fb.innerHTML = `
+            <h5>🤖 AI Self-Introduction Feedback</h5>
+            <p><strong>Score:</strong> ${data.score}/10</p>
+            <hr>
+            <strong>✅ Strengths</strong>
+            <ul>${(data.strengths || []).map(s => `<li>${s}</li>`).join("")}</ul>
+            <strong>⚠️ Improvements</strong>
+            <ul>${(data.improvements || []).map(i => `<li>${i}</li>`).join("")}</ul>
+            <strong>✨ Suggested Introduction</strong>
+            <div class="glass-subcard mt-2">${data.suggested_intro || ""}</div>
+        `;
+
+                document.getElementById("startInterviewBtn").style.display = "inline-block";
+                resetButton();
+            });
+    }
+
+
+    function resetButton() {
+        const btn = document.getElementById("recordBtn");
+        btn.disabled = false;
+        btn.innerText = "🎙 Start Introduction (30s)";
+    }
+
+    document.getElementById("recordBtn").onclick = () => {
+        if (isRecording) return;
+
+        finalTranscript = "";
+        isRecording = true;
+
+        const btn = document.getElementById("recordBtn");
+        btn.innerText = "🎙 Recording...";
+        btn.disabled = true;
+
+        initSpeech();
+        recognition.start();
+        startTimer();
+    };
+
+    window.onload = startCamera;
+</script>
+
+{% endblock %}

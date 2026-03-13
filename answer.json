@@ -1,0 +1,247 @@
+{
+  "Python Developer": [
+    "Decorators in Python are functions that modify the behavior of other functions without changing their source code. They use the @ symbol and are commonly used for logging, timing, or access control.",
+    "Python generators are functions that use yield to produce a sequence of values lazily, saving memory. They're ideal for large datasets as they generate items one at a time rather than storing all in memory.",
+    "Shallow copy creates a new object but references nested objects, while deep copy creates a completely independent copy with all nested objects duplicated. Use copy.copy() for shallow and copy.deepcopy() for deep copies.",
+    "Multithreading handles I/O-bound tasks by running threads concurrently within the same process, while multiprocessing runs separate processes for CPU-bound tasks, bypassing the GIL limitation.",
+    "Python uses automatic garbage collection with reference counting. When an object's reference count drops to zero, the memory is reclaimed. The gc module can handle circular references."
+  ],
+  "Data Scientist": [
+    "Bias-variance tradeoff balances underfitting (high bias from overly simple models) and overfitting (high variance from overly complex models). The goal is to find optimal model complexity that minimizes total error.",
+    "Handle imbalanced datasets using techniques like SMOTE oversampling, random undersampling, or adjusting class weights in algorithms. Use evaluation metrics like F1-score or AUC-ROC instead of accuracy.",
+    "Evaluate regression models using RMSE (penalizes large errors), MAE (average error magnitude), and R-squared (variance explained). Cross-validation provides more reliable performance estimates.",
+    "Feature selection techniques include filter methods (correlation), wrapper methods (recursive feature elimination), and embedded methods (Lasso regularization) to remove irrelevant features and reduce overfitting.",
+    "Deploy ML models via REST APIs using Flask/FastAPI, containerize with Docker, use cloud platforms like AWS SageMaker, and implement monitoring for model performance, data drift, and concept drift."
+  ],
+  "Frontend Developer": [
+    "State stores component-specific data that can change, while props pass data from parent to child components. State triggers re-renders when updated, while props are read-only.",
+    "Virtual DOM is a lightweight copy of the real DOM. When state changes, React creates a new virtual DOM, compares it with previous version, and efficiently updates only the changed parts in the real DOM.",
+    "Optimize frontend performance through code splitting, lazy loading, image optimization, minimizing bundle size, using CDNs, and implementing caching strategies.",
+    "Responsive design uses fluid grids, flexible images, and CSS media queries to adapt layouts to different screen sizes. Mobile-first approach ensures optimal performance on mobile devices.",
+    "Manage state across components using React Context API for simple cases or state management libraries like Redux for complex applications with global state that multiple components need to access."
+  ],
+  "Backend Developer": [
+    "Authentication verifies user identity (who you are), while authorization determines access permissions (what you can do). Common methods include session-based auth and token-based auth like JWT.",
+    "JWT (JSON Web Token) is a stateless authentication method containing encoded user data. It consists of header, payload, and signature, and is commonly used in RESTful APIs for scalability.",
+    "Caching stores frequently accessed data in memory (like Redis) to reduce database load and improve response times. Implement cache strategies like write-through, write-around, or write-back.",
+    "Rate limiting protects APIs from abuse by restricting the number of requests a client can make. Implement using token bucket, fixed window, or sliding window algorithms with tools like Redis.",
+    "Redis is an in-memory data store used for caching, session storage, message brokering, and real-time analytics. It provides fast read/write operations and supports various data structures."
+  ],
+  "Full Stack Developer": [
+    "Frontend and backend communicate via HTTP APIs (RESTful or GraphQL). Frontend sends requests, backend processes them and returns JSON/XML responses. Use axios or fetch for API calls.",
+    "Secure API endpoints with HTTPS, input validation, authentication (JWT/OAuth), authorization checks, rate limiting, and CORS configuration to prevent common vulnerabilities.",
+    "MVC architecture separates concerns: Model handles data logic, View presents data, Controller manages user input. This separation improves maintainability and testability.",
+    "CI/CD automates building, testing, and deployment. CI runs automated tests on code changes, while CD automatically deploys to production. Use tools like Jenkins, GitHub Actions, or GitLab CI.",
+    "Choose databases based on use-case: PostgreSQL for complex queries, MongoDB for flexible schema, Redis for caching, Elasticsearch for search. Consider scalability, consistency needs, and data structure."
+  ],
+  "Machine Learning Engineer": [
+    "Overfitting occurs when a model learns training data noise and performs poorly on new data. Underfitting happens when the model is too simple to capture patterns. Balance with proper model complexity.",
+    "Gradient descent optimizes model parameters by iteratively moving in the direction of steepest descent of the loss function. Variants include SGD, Mini-batch, and Adam optimizers for different scenarios.",
+    "Improve model accuracy through feature engineering (creating new features), hyperparameter tuning (grid/random search), ensemble methods, and addressing data quality issues.",
+    "Data preprocessing includes handling missing values (imputation/removal), encoding categorical variables, scaling/normalizing features, and splitting data into training/validation/test sets.",
+    "Handle large datasets using techniques like data generators, distributed computing (Spark), batch processing, data compression, and efficient data formats like Parquet or Feather."
+  ],
+  "DevOps Engineer": [
+    "Containerization packages applications with dependencies into isolated containers using Docker. This ensures consistency across environments and simplifies deployment.",
+    "Docker creates lightweight, portable containers from images defined in Dockerfiles. Docker Compose manages multi-container applications, while Docker Swarm/Kubernetes handle orchestration.",
+    "CI/CD automates the software delivery process. CI builds and tests code changes automatically, while CD deploys to production. Tools include Jenkins, GitLab CI, and GitHub Actions.",
+    "Monitoring tracks system health using tools like Prometheus for metrics, Grafana for visualization, and ELK stack for logs. Set up alerts for critical issues to ensure system reliability.",
+    "Jenkins is an open-source automation server that orchestrates CI/CD pipelines. It supports plugins, distributed builds, and integration with various version control systems and deployment tools."
+  ],
+  "Cloud Engineer": [
+    "Cloud services provide on-demand computing resources including compute (EC2), storage (S3), databases (RDS), and networking (VPC). They offer scalability, reliability, and cost-efficiency.",
+    "AWS projects typically involve designing scalable architectures using services like EC2 for computing, S3 for storage, RDS for databases, and Lambda for serverless functions.",
+    "Secure cloud data using IAM for access control, encryption at rest and in transit, security groups, network ACLs, and regular security audits and compliance checks.",
+    "Optimize cloud costs through right-sizing instances, using reserved instances for steady workloads, spot instances for flexible workloads, and monitoring usage with Cost Explorer.",
+    "Monitor cloud resources using CloudWatch for metrics and logs, set up dashboards for visibility, configure alarms for thresholds, and use X-Ray for distributed tracing in applications."
+  ],
+  "Java Developer": [
+    "JDK (Java Development Kit) includes tools for development, JRE (Java Runtime Environment) runs Java applications, JVM (Java Virtual Machine) executes bytecode. JDK contains JRE which contains JVM.",
+    "Java 8 introduced lambdas for functional programming, streams for data processing, default methods in interfaces, and new Date/Time API. Later versions added modules, var, and pattern matching.",
+    "Java memory management uses automatic garbage collection. The JVM divides memory into heap (object storage) and stack (method calls). GC algorithms like G1 and ZGC manage memory reclamation.",
+    "Implement multithreading using Thread class or Runnable interface. Use synchronized blocks, volatile variables, and java.util.concurrent package for thread safety and coordination.",
+    "Common Java design patterns include Singleton (single instance), Factory (object creation), Observer (event handling), and Strategy (algorithm selection) to solve recurring design problems."
+  ],
+  "C++ Developer": [
+    "Pointers store memory addresses and can be reassigned, while references are aliases to existing variables and cannot be reassigned. References are safer but pointers offer more flexibility.",
+    "RAII (Resource Acquisition Is Initialization) ties resource management to object lifetime. Resources are acquired in constructors and released in destructors, ensuring automatic cleanup.",
+    "Manage memory manually using new/delete operators. Use smart pointers (unique_ptr, shared_ptr) for automatic memory management. Avoid memory leaks by properly deallocating allocated memory.",
+    "Stack memory is fast, automatically managed, and used for local variables. Heap memory is dynamic, manually managed, and used for objects that need longer lifetime or variable size.",
+    "C++11/14/17 introduced auto type deduction, range-based for loops, lambdas, smart pointers, constexpr, move semantics, and structured bindings for modern, efficient C++ programming."
+  ],
+  "Mobile App Developer (Android/iOS)": [
+    "Android Activity lifecycle includes onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy(). Understanding these states is crucial for proper resource management and user experience.",
+    "Prevent memory leaks by avoiding static references to activities/views, using weak references, properly unregistering listeners, and using LeakCanary for detection in Android development.",
+    "Implement offline storage using SQLite databases with Room persistence library on Android, or Core Data on iOS. For simpler data, use SharedPreferences (Android) or UserDefaults (iOS).",
+    "Native apps are platform-specific (Java/Kotlin for Android, Swift/Obj-C for iOS), hybrid apps use web technologies in a native wrapper, cross-platform apps (React Native/Flutter) share code across platforms.",
+    "Optimize mobile app performance by reducing APK size, minimizing network requests, implementing efficient caching, using background threads for heavy operations, and profiling with Android Studio/Xcode tools."
+  ],
+  "QA Engineer": [
+    "Functional testing verifies features work as specified, while non-functional testing checks performance, security, usability, and reliability aspects of the application.",
+    "Create effective test cases by covering positive/negative scenarios, boundary conditions, and edge cases. Test plans should include scope, objectives, resources, schedule, and deliverables.",
+    "Automated testing tools like Selenium for web, Appium for mobile, and Postman for API testing reduce manual effort, increase test coverage, and enable continuous testing in CI/CD pipelines.",
+    "Regression testing ensures new changes don't break existing functionality. Automate regression suites and run them with each release to maintain software quality and prevent regressions.",
+    "Black-box testing examines functionality without internal code knowledge, while white-box testing uses internal code structure to design tests. Gray-box combines both approaches."
+  ],
+  "Security Engineer": [
+    "Symmetric encryption uses the same key for encryption and decryption (fast, good for bulk data), while asymmetric encryption uses public/private key pairs (secure key exchange, digital signatures).",
+    "Prevent XSS by validating and sanitizing user input, using Content Security Policy, and escaping output. Prevent SQL injection using parameterized queries and ORM frameworks.",
+    "Penetration testing involves authorized simulated attacks to identify vulnerabilities. It includes reconnaissance, scanning, exploitation, and reporting phases to improve security posture.",
+    "Implement TLS/HTTPS for secure communication, use strong cipher suites, configure proper certificates, and enforce HSTS to protect data in transit between clients and servers.",
+    "Secure authentication with multi-factor authentication, strong password policies, and secure token storage. Implement proper authorization checks and principle of least privilege for access control."
+  ],
+  "Data Engineer": [
+    "ETL (Extract, Transform, Load) processes data before loading into warehouse, while ELT (Extract, Load, Transform) loads raw data first then transforms. ELT is better for cloud data warehouses.",
+    "Design data pipelines using tools like Apache Airflow for orchestration, Apache Spark for processing, and Kafka for streaming. Ensure pipelines are scalable, reliable, and monitorable.",
+    "SQL databases (PostgreSQL, MySQL) use structured schema and ACID properties, while NoSQL databases (MongoDB, Cassandra) offer flexible schema and horizontal scalability for unstructured data.",
+    "Partitioning divides large tables into smaller pieces based on criteria like date, while indexing creates data structures for faster lookups. Both improve query performance and manageability.",
+    "Ensure data quality through validation rules, data profiling, monitoring data pipelines, implementing data lineage tracking, and using tools like Great Expectations or Deequ for quality checks."
+  ],
+  "AI Engineer": [
+    "Supervised learning uses labeled data for prediction, unsupervised learning finds patterns in unlabeled data, reinforcement learning learns through rewards/punishments in an environment.",
+    "Prevent overfitting with regularization (L1/L2), dropout, early stopping, and cross-validation. Address underfitting by increasing model complexity, adding features, or reducing regularization.",
+    "TensorFlow offers static computation graphs and production readiness, while PyTorch provides dynamic graphs and better research flexibility. Both support GPU acceleration and neural networks.",
+    "CNNs excel at image processing with convolutional layers, RNNs handle sequential data with memory, Transformers use attention mechanisms for NLP tasks with parallel processing capabilities.",
+    "Deploy AI models via containerized APIs, use model serving frameworks like TensorFlow Serving, implement A/B testing, monitor for concept drift, and set up retraining pipelines for model maintenance."
+  ],
+  "UI/UX Designer (Tech-related)": [
+    "UI (User Interface) focuses on visual design and interactivity, while UX (User Experience) encompasses the overall user journey, usability, and emotional response to the product.",
+    "Conduct user research through interviews, surveys, and usability testing. Create user personas, journey maps, and wireframes to understand user needs and validate design decisions.",
+    "Design responsive interfaces using flexible grids, relative units, and breakpoints. Ensure designs work across devices from mobile to desktop with consistent user experience.",
+    "Use wireframing tools like Figma, Sketch, or Adobe XD for layout planning, and prototyping tools like InVision or Proto.io for interactive mockups to test and refine designs.",
+    "Incorporate accessibility standards (WCAG) by ensuring proper color contrast, keyboard navigation, screen reader compatibility, and alternative text for images to make products inclusive."
+  ],
+  "Database Administrator": [
+    "Relational databases (SQL) use structured tables with relationships and ACID properties, while non-relational databases (NoSQL) use flexible documents, key-value, or graph structures for scalability.",
+    "Perform database backups using full, differential, and transaction log backups. Implement recovery strategies with point-in-time recovery and regularly test restore procedures for disaster recovery.",
+    "Optimize SQL queries by analyzing execution plans, creating appropriate indexes, avoiding SELECT *, using JOINs efficiently, and rewriting complex subqueries for better performance.",
+    "Database indexing uses B-trees for fast data retrieval. Create indexes on frequently queried columns, but avoid over-indexing as it slows down writes. Use composite indexes for multiple columns.",
+    "Handle database security through role-based access control, encryption of sensitive data, regular security patches, audit logging, and network security measures to protect against unauthorized access."
+  ],
+  "Network Engineer": [
+    "OSI model has 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application), while TCP/IP has 4 layers (Link, Internet, Transport, Application). Both describe network communication.",
+    "Configure routers for inter-network communication and routing protocols (OSPF, BGP). Configure switches for intra-network communication using VLANs and spanning tree protocol for loop prevention.",
+    "Manage VPNs for secure remote access, firewalls for traffic filtering, and network security through intrusion detection/prevention systems and regular security assessments.",
+    "Subnetting divides large networks into smaller subnets for efficient IP allocation. Calculate subnets using subnet masks and understand CIDR notation for flexible network design.",
+    "Monitor network performance using SNMP, NetFlow, and monitoring tools like Nagios or Zabbix. Resolve bottlenecks by analyzing traffic patterns, upgrading hardware, and optimizing configurations."
+  ],
+  "Embedded Software Engineer": [
+    "Microcontrollers are compact with integrated peripherals for specific tasks, while microprocessors are more powerful general-purpose CPUs. Microcontrollers are common in IoT devices.",
+    "Handle real-time constraints using RTOS (Real-Time Operating Systems) that guarantee task completion within deadlines. Use priority-based scheduling and interrupt handling for timely responses.",
+    "Program embedded systems in C/C++ for low-level hardware control and efficiency. Use pointers for direct memory access and bit manipulation for hardware register configuration.",
+    "Interrupt handling allows processors to respond immediately to external events. Implement interrupt service routines (ISRs) for time-critical operations while minimizing ISR execution time.",
+    "Manage memory in resource-constrained devices using static allocation, memory pools, and avoiding dynamic allocation when possible. Optimize code size and use compiler optimizations for efficiency."
+  ],
+  "Game Developer": [
+    "Use Unity for 2D/3D games with C# scripting and extensive asset store, or Unreal Engine for high-end 3D games with Blueprints visual scripting and advanced graphics capabilities.",
+    "Optimize game performance through level-of-detail systems, occlusion culling, efficient asset loading, texture compression, and profiling with built-in tools to identify bottlenecks.",
+    "Implement collision detection using physics engines (Box2D, PhysX) and collision meshes. Physics simulation handles rigid body dynamics, gravity, and realistic object interactions.",
+    "Design AI behavior using finite state machines, behavior trees, or utility AI for NPC decision-making. Implement pathfinding with A* algorithm for character navigation.",
+    "Handle multiplayer networking using client-server or peer-to-peer architectures. Implement prediction, reconciliation, and lag compensation techniques for smooth online gameplay."
+  ],
+  "Blockchain Developer": [
+    "Public blockchains (Bitcoin, Ethereum) are open and permissionless, private blockchains restrict participation, consortium blockchains are controlled by multiple organizations for business use.",
+    "Implement smart contracts in Solidity on Ethereum blockchain. Smart contracts are self-executing contracts with terms directly written into code, deployed on blockchain for transparency.",
+    "Ensure blockchain security through cryptographic hashing, digital signatures, consensus mechanisms, and smart contract audits. Protect against reentrancy attacks and overflow vulnerabilities.",
+    "Consensus algorithms: Proof of Work (mining, energy-intensive), Proof of Stake (staking, energy-efficient), and variants like Delegated Proof of Stake for blockchain validation and security.",
+    "Implement blockchain technology for supply chain tracking, digital identity, decentralized finance (DeFi), NFTs, and secure voting systems leveraging transparency and immutability features."
+  ],
+  "Site Reliability Engineer (SRE)": [
+    "SRE focuses on system reliability through engineering practices, while DevOps emphasizes collaboration between development and operations. SRE uses error budgets and SLIs/SLOs.",
+    "Measure reliability using SLIs (Service Level Indicators like latency, availability), define SLOs (Service Level Objectives as targets), and use error budgets to balance reliability and feature development.",
+    "Use monitoring tools like Prometheus for metrics, Grafana for dashboards, and alerting tools like PagerDuty. Implement logging with ELK stack and distributed tracing for observability.",
+    "Handle incidents through declared procedures, on-call rotations, and blameless postmortems. Focus on quick resolution, clear communication, and learning from incidents to prevent recurrences.",
+    "Design load-balanced systems with multiple servers distributing traffic, and fault-tolerant systems with redundancy, failover mechanisms, and graceful degradation to handle component failures."
+  ],
+  "Frontend Framework Specialists (Angular, Vue)": [
+    "Angular uses TypeScript, has built-in solutions, and follows MVC pattern. Vue uses JavaScript/TypeScript, is more flexible, and has gentler learning curve. Both support component-based architecture.",
+    "Manage state in large apps using Vuex (Vue) or NgRx (Angular) for centralized state management. These provide predictable state containers with actions, mutations, and getters.",
+    "Component-based architecture breaks UI into reusable, self-contained components. Components manage their own state and props, promoting reusability, maintainability, and testability.",
+    "Optimize SPA performance through lazy loading routes, code splitting, virtual scrolling for large lists, efficient change detection, and using production builds with minification and compression.",
+    "Implement routing using Vue Router (Vue) or Angular Router. Handle navigation, route parameters, guards for authentication, and lazy loading of feature modules for better performance."
+  ],
+  "ERP Developer": [
+    "ERP modules include Finance (GL, AP, AR), HR (payroll, recruitment), Supply Chain (inventory, procurement), and Manufacturing. They integrate business processes across departments.",
+    "Experience with SAP involves ABAP programming, customizing workflows, and module configuration. Oracle ERP experience includes PL/SQL development and Oracle Forms/Reports customization.",
+    "Customize ERP workflows using business rules, approval processes, and automated notifications. Extend functionality through custom fields, forms, and integrations with external systems.",
+    "Handle ERP data migration through extraction from legacy systems, data cleansing and transformation, validation, and loading into new ERP system. Use staging environments for testing.",
+    "Generate ERP reports using built-in reporting tools, SQL queries, or BI integrations. Create analytics dashboards for business intelligence and decision-making across organizational functions."
+  ],
+  "Salesforce Developer": [
+    "Lightning Experience offers modern UI with components and app builder, while Classic has traditional interface. Lightning provides better mobile experience and faster development.",
+    "Create custom objects for business data, custom fields for attributes, and workflows for automated business processes using point-and-click tools in Salesforce Setup.",
+    "Develop with Apex (Java-like programming language) for business logic and Visualforce (markup language) for UI. Use SOQL for data queries and SOSL for search operations.",
+    "Integrate Salesforce with external systems using REST/SOAP APIs, middleware platforms like MuleSoft, or declarative tools like Process Builder and Flow for no-code integrations.",
+    "Manage security through profiles (user capabilities), permission sets (additional permissions), sharing rules (record access), and field-level security to control data access."
+  ],
+  "Robotics Engineer": [
+    "Kinematics studies motion geometry (position, velocity), while dynamics studies forces causing motion (torque, inertia). Forward kinematics calculates end-effector position from joint angles.",
+    "ROS (Robot Operating System) provides tools and libraries for robot software development. It includes communication middleware, package management, and visualization tools like RViz.",
+    "Implement sensor integration for perception (cameras, LIDAR) and control algorithms (PID, MPC) for actuation. Use sensor fusion to combine data from multiple sensors for robustness.",
+    "Path planning finds collision-free paths using algorithms like A*, RRT, or PRM. Motion control executes trajectories using inverse kinematics and dynamic models for smooth movement.",
+    "Manage real-time processing using RTOS, prioritize critical tasks, minimize latency in control loops, and use hardware acceleration for computationally intensive perception tasks."
+  ],
+  "System Analyst": [
+    "Gather requirements through stakeholder interviews, workshops, and document analysis. Document requirements in specification documents, user stories, or use cases with clear acceptance criteria.",
+    "Use UML diagrams: use case diagrams (functionality), class diagrams (structure), sequence diagrams (interactions), and activity diagrams (workflows) to model system design and behavior.",
+    "Perform feasibility analysis (technical, economic, operational) and cost analysis (development, maintenance, ROI) to determine project viability and support decision-making.",
+    "Manage system testing through test planning, coordination with QA teams, validation against requirements, and user acceptance testing to ensure system meets business needs.",
+    "Communicate between technical teams (developers) and non-technical stakeholders (business users) by translating requirements, explaining technical constraints, and facilitating collaboration."
+  ],
+  "Firmware Engineer": [
+    "Firmware is low-level software embedded in hardware devices, while software runs on general-purpose computers. Firmware has direct hardware control and real-time constraints.",
+    "Program embedded systems in C/C++ for efficiency and hardware access. Use pointers for memory-mapped I/O, bit manipulation for register control, and inline assembly for critical sections.",
+    "Handle low-level hardware interfaces through device drivers, interrupt service routines, and direct register access. Implement communication protocols like I2C, SPI, UART for peripheral communication.",
+    "Debug firmware using JTAG/SWD debuggers, logic analyzers, and serial console output. Test on target hardware with unit tests, integration tests, and hardware-in-the-loop testing.",
+    "Optimize firmware by minimizing memory usage, reducing power consumption, improving execution speed through algorithm optimization, and using compiler optimizations for embedded targets."
+  ],
+  "AR/VR Developer": [
+    "AR (Augmented Reality) overlays digital content on real world, VR (Virtual Reality) creates fully immersive digital environments, MR (Mixed Reality) blends real and virtual worlds interactively.",
+    "Use Unity with AR Foundation for cross-platform AR or Unreal Engine for high-fidelity VR. Both support 3D rendering, physics, and XR plugin frameworks for various headsets and devices.",
+    "Optimize 3D rendering through level of detail, occlusion culling, efficient shaders, and texture compression. Target high frame rates (90+ FPS) for comfortable VR experiences.",
+    "Implement user interaction through hand tracking, controllers, gaze input, and gesture recognition. Design intuitive UI/UX for spatial computing with 3D interfaces and natural interactions.",
+    "Integrate AR/VR with sensors (cameras, IMUs) for tracking and IoT devices for real-world interaction. Use spatial mapping for environment understanding and anchor digital content."
+  ],
+  "Test Automation Engineer": [
+    "Manual testing involves human testers executing test cases, while automated testing uses scripts and tools to run tests automatically. Automation is faster, more reliable, and enables continuous testing.",
+    "Use Selenium for web automation with multiple language bindings, or Cypress for modern web apps with easier setup. Both support cross-browser testing and integration with testing frameworks.",
+    "Design maintainable test scripts using Page Object Model, data-driven testing, and modular architecture. Implement proper wait strategies, error handling, and logging for reliability.",
+    "Integrate automated tests into CI/CD pipelines using Jenkins, GitLab CI, or GitHub Actions. Run tests automatically on code changes and generate test reports for quality metrics.",
+    "Handle flaky tests by investigating root causes (timing issues, test dependencies), implementing retry mechanisms, and maintaining test environment stability. Monitor test stability metrics."
+  ],
+  "Business Intelligence Developer": [
+    "OLAP (Online Analytical Processing) systems optimize for complex queries and data analysis, while OLTP (Online Transaction Processing) systems optimize for fast transaction processing and data integrity.",
+    "Use Power BI for Microsoft ecosystem integration, Tableau for advanced visualization, or QlikView for associative data modeling. Each tool offers different strengths in data visualization and analysis.",
+    "Design data models using star/snowflake schemas with fact and dimension tables. Create interactive dashboards with filters, drill-downs, and KPIs for business decision-making.",
+    "Handle ETL processes using tools like SSIS, Informatica, or Talend. Extract data from sources, transform (clean, aggregate, enrich), and load into data warehouses for reporting and analysis.",
+    "Optimize BI report performance through efficient query design, proper indexing, data aggregation, caching strategies, and limiting real-time data processing for large datasets."
+  ],
+  "API Developer": [
+    "RESTful APIs use HTTP methods, stateless communication, and resource-based URLs. SOAP uses XML, WSDL, and strict standards. REST is more flexible and widely used for web services.",
+    "Design APIs with clear endpoints, consistent naming, versioning strategy, and comprehensive documentation using OpenAPI/Swagger. Consider rate limiting, authentication, and error handling.",
+    "Secure APIs with authentication (OAuth2, JWT), authorization (role-based access), input validation, HTTPS encryption, and CORS configuration to protect against common vulnerabilities.",
+    "Handle API versioning through URL path (v1/), query parameters, or custom headers. Maintain backward compatibility when possible and communicate breaking changes to consumers.",
+    "Optimize API performance through caching strategies, pagination for large datasets, compression, efficient database queries, and monitoring response times and error rates."
+  ],
+  "SAP Consultant": [
+    "SAP modules include FI (Finance), CO (Controlling), MM (Materials Management), SD (Sales & Distribution), and HR (Human Resources) that integrate business processes across organizations.",
+    "Implement SAP through blueprinting, configuration, customization, and testing. Customize using user exits, BADIs, and enhancements to meet specific business requirements beyond standard functionality.",
+    "Perform data migration using LSMW (Legacy System Migration Workbench) or custom programs. Extract, transform, and load master data and transaction data from legacy systems to SAP.",
+    "Configure SAP workflows for approval processes, automated notifications, and business process automation. Create reports using ABAP, Query, or BI tools for business intelligence.",
+    "Integrate SAP with other systems using IDocs for document exchange, RFC for remote function calls, and middleware like SAP PI/PO for complex enterprise application integration scenarios."
+  ],
+  "Site Architect (Web Applications)": [
+    "Design scalable architectures using load balancers, CDNs, caching layers, and database replication. Consider microservices vs monolith based on team size, complexity, and scalability needs.",
+    "Integrate frontend and backend through well-defined APIs, establish communication protocols, implement error handling, and ensure data consistency across distributed systems.",
+    "Secure web applications with HTTPS, input validation, authentication/authorization, security headers, regular security testing, and monitoring for suspicious activities and vulnerabilities.",
+    "Choose monolithic architecture for simpler applications with small teams, or microservices for complex systems requiring independent scaling, deployment, and technology diversity.",
+    "Optimize performance through caching strategies (CDN, Redis), database optimization, code minification, image optimization, and implementing performance monitoring and alerting systems."
+  ],
+  "Python Automation Engineer": [
+    "Use Python for automation through scripting, web scraping, GUI automation, and task scheduling. Python's extensive libraries and simplicity make it ideal for various automation tasks.",
+    "Work with Selenium for web automation, PyAutoGUI for GUI automation, Requests for API interactions, and BeautifulSoup for web scraping. Each library serves different automation needs.",
+    "Schedule tasks using cron jobs (Linux), Task Scheduler (Windows), or Python libraries like APScheduler. Implement robust exception handling and logging for reliable automation.",
+    "Design reusable code through functions, classes, and modules. Create configurable scripts with configuration files and command-line arguments for flexibility across different environments.",
+    "Automate complex workflows by combining multiple tools: web scraping with Selenium, data processing with pandas, file operations with os/shutil, and email notifications with smtplib."
+  ]
+}

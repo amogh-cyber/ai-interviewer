@@ -1,0 +1,422 @@
+{
+    "Python Developer": {
+        "summary": {
+            "strong": "Your resume strongly aligns with Python developer roles, clearly showcasing Python-based development experience and problem-solving ability.",
+            "medium": "Your resume reflects basic Python knowledge but lacks depth in advanced concepts and real-world project exposure.",
+            "weak": "Your resume does not clearly highlight Python-focused skills and requires better role-specific structuring."
+        },
+        "strengths": [
+            "Python programming fundamentals are evident",
+            "Exposure to frameworks like Flask or Django",
+            "Scripting and automation experience is visible",
+            "Basic understanding of data structures",
+            "Logical problem-solving skills"
+        ],
+        "missing_skills": [
+            "REST API development",
+            "Database integration",
+            "Unit testing",
+            "Advanced Python concepts",
+            "Deployment and packaging"
+        ]
+    },
+    "Data Scientist": {
+        "summary": {
+            "strong": "Your resume aligns well with data science roles, highlighting analytical thinking, data handling, and model-based problem solving.",
+            "medium": "Your resume shows exposure to data concepts but lacks strong machine learning depth and real-world datasets.",
+            "weak": "Your resume does not clearly position you as a data science professional."
+        },
+        "strengths": [
+            "Data analysis concepts are present",
+            "Familiarity with Python libraries",
+            "Basic machine learning understanding",
+            "Statistical thinking",
+            "Data preprocessing knowledge"
+        ],
+        "missing_skills": [
+            "Advanced ML algorithms",
+            "Feature engineering",
+            "Model evaluation techniques",
+            "Data visualization storytelling",
+            "Production ML pipelines"
+        ]
+    },
+    "Frontend Developer": {
+        "summary": {
+            "strong": "Your resume strongly aligns with frontend development roles, demonstrating solid UI development and client-side logic skills.",
+            "medium": "Your resume shows frontend exposure but lacks strong project depth and modern framework mastery.",
+            "weak": "Your resume does not clearly reflect frontend specialization."
+        },
+        "strengths": [
+            "HTML, CSS, and JavaScript fundamentals",
+            "Basic responsive design knowledge",
+            "Frontend framework exposure",
+            "UI-focused development approach",
+            "Component-based thinking"
+        ],
+        "missing_skills": [
+            "Advanced JavaScript concepts",
+            "State management",
+            "Performance optimization",
+            "Accessibility standards",
+            "Cross-browser compatibility"
+        ]
+    },
+    "Backend Developer": {
+        "summary": {
+            "strong": "Your resume aligns well with backend development roles, showing experience in server-side logic and API design.",
+            "medium": "Your resume demonstrates backend concepts but lacks scalability and security depth.",
+            "weak": "Your resume does not clearly communicate backend expertise."
+        },
+        "strengths": [
+            "API development understanding",
+            "Server-side programming knowledge",
+            "Database interaction",
+            "Authentication basics",
+            "Backend logic implementation"
+        ],
+        "missing_skills": [
+            "Caching strategies",
+            "Rate limiting",
+            "Security best practices",
+            "Scalable architecture",
+            "Performance tuning"
+        ]
+    },
+    "Full Stack Developer": {
+        "summary": {
+            "strong": "Your resume demonstrates strong full-stack capability with clear frontend and backend integration experience.",
+            "medium": "Your resume shows exposure to both frontend and backend but lacks depth in one or both layers.",
+            "weak": "Your resume does not clearly present balanced full-stack expertise."
+        },
+        "strengths": [
+            "Frontend-backend communication",
+            "API integration",
+            "Database handling",
+            "Basic system architecture understanding",
+            "End-to-end project exposure"
+        ],
+        "missing_skills": [
+            "System design",
+            "CI/CD pipelines",
+            "Security practices",
+            "Scalable architecture",
+            "Production deployment"
+        ]
+    },
+    "Machine Learning Engineer": {
+        "summary": {
+            "strong": "Your resume aligns strongly with machine learning engineering roles, showcasing solid understanding of model development, training, and optimization.",
+            "medium": "Your resume shows basic machine learning exposure but lacks depth in production-grade model building and optimization.",
+            "weak": "Your resume does not clearly reflect machine learning engineering expertise and requires better technical positioning."
+        },
+        "strengths": [
+            "Understanding of machine learning fundamentals",
+            "Experience with model training and evaluation",
+            "Knowledge of data preprocessing pipelines",
+            "Familiarity with ML libraries such as TensorFlow or PyTorch",
+            "Problem-solving using data-driven approaches"
+        ],
+        "missing_skills": [
+            "Model deployment",
+            "Hyperparameter tuning",
+            "Scalable ML pipelines",
+            "Monitoring model performance",
+            "Handling large datasets efficiently"
+        ]
+    },
+    "DevOps Engineer": {
+        "summary": {
+            "strong": "Your resume demonstrates strong alignment with DevOps roles, highlighting automation, CI/CD practices, and infrastructure management.",
+            "medium": "Your resume shows DevOps exposure but lacks advanced automation and monitoring depth.",
+            "weak": "Your resume does not clearly communicate DevOps-focused experience."
+        },
+        "strengths": [
+            "CI/CD pipeline understanding",
+            "Basic containerization knowledge",
+            "Infrastructure automation exposure",
+            "Version control practices",
+            "Collaboration between development and operations"
+        ],
+        "missing_skills": [
+            "Kubernetes orchestration",
+            "Advanced monitoring and logging",
+            "Infrastructure as Code",
+            "Security automation",
+            "Scalability and reliability engineering"
+        ]
+    },
+    "Cloud Engineer": {
+        "summary": {
+            "strong": "Your resume aligns well with cloud engineering roles, demonstrating hands-on experience with cloud platforms and deployment strategies.",
+            "medium": "Your resume reflects cloud service exposure but lacks strong architecture and cost optimization depth.",
+            "weak": "Your resume does not clearly position you as a cloud-focused professional."
+        },
+        "strengths": [
+            "Understanding of cloud service models",
+            "Experience with cloud deployment",
+            "Basic security and access control knowledge",
+            "Virtualization and resource management",
+            "Cloud-native application awareness"
+        ],
+        "missing_skills": [
+            "Cost optimization strategies",
+            "High-availability architecture",
+            "Advanced cloud security",
+            "Multi-cloud management",
+            "Monitoring and performance tuning"
+        ]
+    },
+    "Java Developer": {
+        "summary": {
+            "strong": "Your resume strongly aligns with Java development roles, highlighting object-oriented programming and enterprise application development.",
+            "medium": "Your resume shows Java exposure but lacks advanced framework usage and system-level design.",
+            "weak": "Your resume does not clearly demonstrate Java-centric development skills."
+        },
+        "strengths": [
+            "Core Java fundamentals",
+            "Object-oriented programming concepts",
+            "Basic multithreading knowledge",
+            "Experience with Java-based applications",
+            "Understanding of JVM concepts"
+        ],
+        "missing_skills": [
+            "Spring/Spring Boot frameworks",
+            "Microservices architecture",
+            "Performance optimization",
+            "Advanced concurrency",
+            "Enterprise-level design patterns"
+        ]
+    },
+    "C++ Developer": {
+        "summary": {
+            "strong": "Your resume aligns well with C++ development roles, demonstrating strong understanding of low-level programming and memory management.",
+            "medium": "Your resume shows C++ fundamentals but lacks advanced usage and system-level project experience.",
+            "weak": "Your resume does not clearly reflect strong C++ development expertise."
+        },
+        "strengths": [
+            "Understanding of C++ syntax and concepts",
+            "Knowledge of pointers and memory management",
+            "Basic object-oriented programming",
+            "Experience with performance-oriented code",
+            "Problem-solving using low-level logic"
+        ],
+        "missing_skills": [
+            "Modern C++ standards",
+            "STL mastery",
+            "Multithreading",
+            "Performance profiling",
+            "Large-scale system development"
+        ]
+    },
+    "Mobile App Developer (Android/iOS)": {
+        "summary": {
+            "strong": "Your resume aligns strongly with mobile application development roles, showing experience in building, optimizing, and maintaining mobile apps.",
+            "medium": "Your resume shows mobile development exposure but lacks advanced app architecture and performance optimization depth.",
+            "weak": "Your resume does not clearly highlight mobile app development expertise."
+        },
+        "strengths": [
+            "Understanding of mobile app lifecycle",
+            "Experience with Android or iOS development",
+            "UI implementation for mobile screens",
+            "Basic performance optimization awareness",
+            "Handling user interactions and navigation"
+        ],
+        "missing_skills": [
+            "Advanced app architecture",
+            "Offline data storage",
+            "Memory optimization",
+            "App security practices",
+            "Publishing and monitoring apps"
+        ]
+    },
+    "QA Engineer": {
+        "summary": {
+            "strong": "Your resume aligns well with QA engineering roles, demonstrating a structured approach to testing and quality assurance.",
+            "medium": "Your resume shows testing exposure but lacks automation depth and test strategy planning.",
+            "weak": "Your resume does not clearly present quality assurance expertise."
+        },
+        "strengths": [
+            "Understanding of testing fundamentals",
+            "Experience with test case creation",
+            "Knowledge of functional testing",
+            "Basic defect tracking",
+            "Attention to detail"
+        ],
+        "missing_skills": [
+            "Automation testing frameworks",
+            "CI/CD testing integration",
+            "Performance testing",
+            "Security testing",
+            "Advanced test strategy design"
+        ]
+    },
+    "Security Engineer": {
+        "summary": {
+            "strong": "Your resume demonstrates strong alignment with security engineering roles, highlighting secure system design and vulnerability awareness.",
+            "medium": "Your resume shows security knowledge but lacks hands-on penetration testing or real-world security implementation depth.",
+            "weak": "Your resume does not clearly position you as a security-focused engineer."
+        },
+        "strengths": [
+            "Understanding of security fundamentals",
+            "Knowledge of common vulnerabilities",
+            "Authentication and authorization awareness",
+            "Basic encryption concepts",
+            "Security best practices exposure"
+        ],
+        "missing_skills": [
+            "Penetration testing",
+            "Security automation",
+            "Advanced threat modeling",
+            "Incident response",
+            "Compliance and security standards"
+        ]
+    },
+    "Data Engineer": {
+        "summary": {
+            "strong": "Your resume aligns strongly with data engineering roles, demonstrating experience in building and managing data pipelines.",
+            "medium": "Your resume shows data processing exposure but lacks scalability and big data ecosystem depth.",
+            "weak": "Your resume does not clearly communicate data engineering expertise."
+        },
+        "strengths": [
+            "ETL/ELT process understanding",
+            "Experience with SQL and databases",
+            "Data pipeline fundamentals",
+            "Basic data modeling knowledge",
+            "Data consistency awareness"
+        ],
+        "missing_skills": [
+            "Big data frameworks",
+            "Streaming data processing",
+            "Pipeline orchestration",
+            "Data quality automation",
+            "Scalable architecture design"
+        ]
+    },
+    "AI Engineer": {
+        "summary": {
+            "strong": "Your resume aligns well with AI engineering roles, showcasing knowledge of intelligent systems and model-driven solutions.",
+            "medium": "Your resume shows AI concepts but lacks deep learning implementation and production deployment depth.",
+            "weak": "Your resume does not clearly reflect AI engineering specialization."
+        },
+        "strengths": [
+            "Understanding of AI fundamentals",
+            "Exposure to deep learning frameworks",
+            "Basic neural network concepts",
+            "Model training awareness",
+            "Problem-solving using AI approaches"
+        ],
+        "missing_skills": [
+            "Advanced deep learning architectures",
+            "Model optimization",
+            "Production AI deployment",
+            "Monitoring AI systems",
+            "Ethical AI considerations"
+        ]
+    },
+    "Blockchain Developer": {
+        "summary": {
+            "strong": "Your resume aligns strongly with blockchain development roles, highlighting decentralized application concepts and smart contract knowledge.",
+            "medium": "Your resume shows blockchain exposure but lacks depth in real-world implementations and security considerations.",
+            "weak": "Your resume does not clearly demonstrate blockchain-specific expertise."
+        },
+        "strengths": [
+            "Understanding of blockchain fundamentals",
+            "Exposure to smart contracts",
+            "Knowledge of decentralized systems",
+            "Basic cryptographic concepts",
+            "Awareness of blockchain platforms"
+        ],
+        "missing_skills": [
+            "Smart contract security",
+            "Consensus mechanisms",
+            "Blockchain scalability",
+            "Gas optimization",
+            "Production-grade dApp deployment"
+        ]
+    },
+    "Site Reliability Engineer (SRE)": {
+        "summary": {
+            "strong": "Your resume aligns well with SRE roles, demonstrating focus on reliability, scalability, and system stability.",
+            "medium": "Your resume shows reliability concepts but lacks strong monitoring and incident response experience.",
+            "weak": "Your resume does not clearly reflect site reliability engineering expertise."
+        },
+        "strengths": [
+            "Understanding of system reliability",
+            "Monitoring and alerting awareness",
+            "Basic automation knowledge",
+            "Incident handling exposure",
+            "Infrastructure stability concepts"
+        ],
+        "missing_skills": [
+            "SLI/SLO design",
+            "Advanced monitoring tools",
+            "Chaos engineering",
+            "Incident postmortems",
+            "Large-scale system reliability"
+        ]
+    },
+    "Frontend Framework Specialists (Angular, Vue)": {
+        "summary": {
+            "strong": "Your resume demonstrates strong alignment with modern frontend frameworks, highlighting component-based architecture and state management.",
+            "medium": "Your resume shows framework exposure but lacks deep optimization and large-scale application experience.",
+            "weak": "Your resume does not clearly position you as a frontend framework specialist."
+        },
+        "strengths": [
+            "Component-based development",
+            "Framework-specific knowledge",
+            "Routing and navigation",
+            "Basic state management",
+            "Frontend application structuring"
+        ],
+        "missing_skills": [
+            "Advanced state management",
+            "Performance optimization",
+            "Lazy loading strategies",
+            "Testing frameworks",
+            "Large-scale frontend architecture"
+        ]
+    },
+    "ERP Developer": {
+        "summary": {
+            "strong": "Your resume aligns well with ERP development roles, showing understanding of enterprise workflows and system integration.",
+            "medium": "Your resume shows ERP exposure but lacks customization and large-scale implementation depth.",
+            "weak": "Your resume does not clearly highlight ERP-focused development experience."
+        },
+        "strengths": [
+            "ERP module understanding",
+            "Workflow customization knowledge",
+            "Business process awareness",
+            "Data handling within ERP systems",
+            "Enterprise application exposure"
+        ],
+        "missing_skills": [
+            "Advanced ERP customization",
+            "System integration",
+            "ERP performance optimization",
+            "Upgrade and migration handling",
+            "Enterprise reporting"
+        ]
+    },
+    "Salesforce Developer": {
+        "summary": {
+            "strong": "Your resume strongly aligns with Salesforce development roles, showcasing CRM customization and platform-specific development.",
+            "medium": "Your resume shows Salesforce exposure but lacks advanced automation and integration experience.",
+            "weak": "Your resume does not clearly reflect Salesforce development expertise."
+        },
+        "strengths": [
+            "Salesforce platform knowledge",
+            "Custom object and workflow creation",
+            "CRM customization awareness",
+            "Basic Apex development",
+            "Understanding of Salesforce security"
+        ],
+        "missing_skills": [
+            "Advanced Apex programming",
+            "Lightning Web Components",
+            "Third-party integrations",
+            "Salesforce automation",
+            "Performance optimization"
+        ]
+    }
+}

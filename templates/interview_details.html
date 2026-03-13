@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="h2 mb-2 fw-semibold" style="color: var(--text-dark);">
+                Interview Details
+            </h1>
+            <p class="mb-0" style="color: var(--text-light);">
+                Complete analysis of your interview performance
+            </p>
+        </div>
+        <a href="{{ url_for('previous_interviews') }}" class="btn btn-outline-light px-4 py-2 rounded-pill">
+            <i class="fas fa-arrow-left me-2"></i>Back to History
+        </a>
+    </div>
+
+
+    <div class="glass-card p-4 mb-5">
+        <div class="row g-4">
+
+        
+            <div class="col-lg-8">
+                <div class="row g-3">
+
+                    {% set percentage = (interview.total_score / interview.max_score * 100) if interview.max_score > 0
+                    else 0 %}
+
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <small>Role Applied</small>
+                                <p>{{ interview.role }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div>
+                                <small>Date Completed</small>
+                                <p>{{ interview.interview_date }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <small>Answered</small>
+                                <p>{{ interview.answered_count }}/{{ interview.total_questions }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div>
+                                <small>Success Rate</small>
+                                <p>{{ "%.1f"|format(percentage) }}%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if interview.emotion_summary %}
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="icon-box small">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <strong style="color: var(--text-dark);">Emotion Analysis</strong>
+                    </div>
+                    <p style="color: var(--text-light);" class="ps-5 mb-0">
+                        {{ interview.emotion_summary }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+
+        
+            <div class="col-lg-4">
+                <div class="score-card h-100 text-center">
+                    <p class="opacity-75 mb-3">Overall Score</p>
+
+                    <div class="circular-progress" data-percentage="{{ percentage }}">
+                        <svg width="140" height="140">
+                            <circle cx="70" cy="70" r="65" fill="none" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="8" />
+                            <circle class="progress-ring" cx="70" cy="70" r="65" fill="none" stroke="white"
+                                stroke-width="8" stroke-linecap="round" />
+                        </svg>
+                        <div class="score-value">
+                            <h2>{{ interview.total_score }}</h2>
+                            <span>/ {{ interview.max_score }}</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        {% if percentage >= 85 %}
+                        <span class="badge gold">Gold Performance</span>
+                        {% elif percentage >= 70 %}
+                        <span class="badge silver">Silver Performance</span>
+                        {% elif percentage >= 50 %}
+                        <span class="badge bronze">Bronze Performance</span>
+                        {% else %}
+                        <span class="badge danger">Needs Improvement</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="mb-5">
+        <div class="d-flex justify-content-between mb-4">
+            <h3 class="fw-semibold" style="color: var(--text-dark);">
+                Question Analysis
+            </h3>
+            <span style="color: var(--text-light);">
+                {{ interview.questions|length }} questions
+            </span>
+        </div>
+
+        {% for i in range(interview.questions|length) %}
+        <div class="glass-card question-card mb-4" data-score="{{ interview.scores[i] }}">
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <span class="badge question-badge">
+                        Question {{ i+1 }}
+                    </span>
+
+                    <p class="mt-3 fw-semibold" style="color: var(--text-dark);">
+                        {{ interview.questions[i] }}
+                    </p>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="answer-card">
+                                <strong>Your Answer</strong>
+                                <p>
+                                    {{ interview.user_answers[i] if interview.user_answers[i] else "No answer provided"
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="answer-card correct">
+                                <strong>Correct Answer</strong>
+                                <p>
+                                    {{ correct_answers[i] if correct_answers and correct_answers[i] else "N/A" }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="feedback-card">
+                        <strong>{{ interview.scores[i] }}/5</strong>
+                        <div class="progress mt-2">
+                            <div class="progress-bar" style="width: {{ (interview.scores[i]/5)*100 }}%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<style>
+    
+
+    .glass-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        box-shadow: 0 15px 35px var(--shadow-color);
+        padding: 1.5rem;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 14px;
+    }
+
+    .info-item small {
+        color: var(--text-light);
+    }
+
+    .info-item p {
+        color: var(--text-dark);
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: rgba(93, 135, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+    }
+
+    .icon-box.small {
+        width: 40px;
+        height: 40px;
+    }
+
+    .score-card {
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        color: white;
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .circular-progress {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin: auto;
+    }
+
+    .progress-ring {
+        stroke-dasharray: 408;
+        stroke-dashoffset: calc(408 - (408 * var(--progress)) / 100);
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    .score-value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .question-card {
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .answer-card {
+        background: var(--gray-50);
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .answer-card.correct {
+        border-left: 4px solid #22c55e;
+    }
+
+    .feedback-card {
+        background: var(--gray-50);
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .progress {
+        height: 6px;
+        background: var(--gray-100);
+    }
+
+    .progress-bar {
+        background: linear-gradient(90deg,
+                var(--primary-color),
+                var(--secondary-color));
+    }
+
+    .badge {
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    .badge.gold {
+        background: #f59e0b;
+        color: white;
+    }
+
+    .badge.silver {
+        background: #64748b;
+        color: white;
+    }
+
+    .badge.bronze {
+        background: #92400e;
+        color: white;
+    }
+
+    .badge.danger {
+        background: #ef4444;
+        color: white;
+    }
+
+    .question-badge {
+        background: rgba(93, 135, 255, 0.15);
+        color: var(--primary-color);
+        padding: 6px 14px;
+        border-radius: 999px;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.circular-progress').forEach(el => {
+            const percent = el.dataset.percentage || 0;
+            el.style.setProperty('--progress', percent);
+        });
+    });
+</script>
+
+{% endblock %}

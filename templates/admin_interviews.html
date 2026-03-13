@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin – Interview Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background: #212529;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #adb5bd;
+            padding: 10px 15px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #343a40;
+            color: #fff;
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            
+            <div class="col-md-2 sidebar">
+                <h4 class="text-center mb-4">Admin Panel</h4>
+            
+                <a href="{{ url_for('admin_dashboard') }}" >
+                    📊 Dashboard
+                </a>
+            
+                <a href="{{ url_for('admin_users') }}">
+                    👥 Users
+                </a>
+            
+                <a href="{{ url_for('admin_interviews') }}" class="active">📄Interview Results</a>
+            
+                </a>
+                <a href="{{ url_for('admin_create_meeting') }}">
+                    🎥 Create Meeting
+                </a>
+                <hr class="text-secondary mx-3">
+            
+                <a href="{{ url_for('logout') }}" class="text-danger">
+                    🚪 Logout
+                </a>
+            </div>
+
+        
+            <div class="col-md-10 p-4">
+
+                <h3 class="fw-bold mb-4">Interview Results</h3>
+
+                <div class="card p-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th>Score</th>
+                                    <th>Percentage</th>
+                                    <th>Answered</th>
+                                    <th>Emotion</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for i in interviews %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td class="fw-semibold">{{ i.username }}</td>
+                                    <td>{{ i.role }}</td>
+                                    <td>{{ i.total_score }} / {{ i.max_score }}</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            {{ i.percentage }}%
+                                        </span>
+                                    </td>
+                                    <td>{{ i.answered }}</td>
+                                    <td>{{ i.emotion or "—" }}</td>
+                                    <td>{{ i.date }}</td>
+                                </tr>
+                                {% else %}
+                                <tr>
+                                    <td colspan="8" class="text-center text-muted py-4">
+                                        No interview results found
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+
+    .result-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding-bottom: 100px;
+    }
+
+    
+    .score-banner {
+        background: var(--card-bg);
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 20px 40px var(--shadow-color);
+        margin-bottom: 40px;
+        border: 1px solid var(--border-color);
+    }
+
+    .score-circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 2rem;
+        font-weight: 800;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .score-banner h2 {
+        color: var(--text-dark);
+        font-weight: 800;
+    }
+
+    .score-banner p {
+        color: var(--text-light);
+    }
+
+    
+    .review-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+        margin-bottom: 24px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        box-shadow: 0 12px 30px var(--shadow-color);
+    }
+
+    .review-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 45px var(--shadow-color);
+    }
+
+    .card-status-bar {
+        height: 6px;
+        width: 100%;
+    }
+
+    .status-correct {
+        background: #22c55e;
+    }
+
+    .status-wrong {
+        background: #ef4444;
+    }
+
+    .review-body {
+        padding: 25px;
+    }
+
+    .review-body p {
+        color: var(--text-dark);
+    }
+
+
+    .option-pill {
+        padding: 12px 18px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        border: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--gray-50);
+        color: var(--text-dark);
+        transition: all 0.2s ease;
+    }
+
+    .opt-correct {
+        background: rgba(34, 197, 94, 0.15);
+        border-color: #22c55e;
+        font-weight: 600;
+    }
+
+    .opt-wrong {
+        background: rgba(239, 68, 68, 0.15);
+        border-color: #ef4444;
+    }
+
+    
+    .result-pass {
+        color: #22c55e;
+        font-weight: 700;
+    }
+
+    .result-fail {
+        color: #ef4444;
+        font-weight: 700;
+    }
+
+
+    .btn-return {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        color: var(--text-dark);
+        border-radius: 12px;
+        padding: 12px 30px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-return:hover {
+        background: var(--gray-100);
+        color: var(--primary-color);
+        transform: translateX(-4px);
+    }
+
+    .btn-try-again {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 32px;
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        color: #ffffff;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        border: none;
+    }
+
+    .btn-try-again:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+        color: #fff;
+    }
+
+    .btn-icon {
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+</style>
+
+<div class="result-container px-3">
+
+    
+    <div class="score-banner">
+        <div class="score-circle">
+            {{ score }}
+            <span style="font-size:1rem; opacity:.85; margin-left:4px;">/{{ total }}</span>
+        </div>
+
+        <h2>{{ role }} Analysis</h2>
+        <p>Review your performance and correct answers below.</p>
+
+        <a href="/aptitude" class="btn-return mt-3">← Back to Roles</a>
+    </div>
+
+    <h4 class="mb-4 fw-bold" style="color: var(--text-dark);">
+        Question Review
+    </h4>
+
+    {% for r in results %}
+    <div class="review-card">
+        <div class="card-status-bar
+            {% if r.user_answer == r.correct_answer %}
+                status-correct
+            {% else %}
+                status-wrong
+            {% endif %}
+        "></div>
+
+        <div class="review-body">
+            <p class="fw-bold mb-3">
+                <span style="color: var(--text-light); margin-right:6px;">
+                    #{{ loop.index }}
+                </span>
+                {{ r.question }}
+            </p>
+
+            {% for key, opt in r.options.items() %}
+            <div class="option-pill
+                {% if key == r.correct_answer %}opt-correct{% endif %}
+                {% if key == r.user_answer and key != r.correct_answer %}opt-wrong{% endif %}
+            ">
+                <span><strong>{{ key }}.</strong> {{ opt }}</span>
+
+                {% if key == r.correct_answer %}
+                <small class="fw-bold" style="color:#22c55e;">Correct</small>
+                {% elif key == r.user_answer %}
+                <small class="fw-bold" style="color:#ef4444;">Your Pick</small>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            <div class="mt-2 small">
+                <span style="color: var(--text-light);">Result:</span>
+                {% if r.user_answer == r.correct_answer %}
+                <span class="result-pass">Pass</span>
+                {% else %}
+                <span class="result-fail">Fail</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="text-center mt-5">
+        <a href="/aptitude" class="btn-try-again">
+            <span class="btn-icon">↺</span> Try Again
+        </a>
+    </div>
+</div>
+{% endblock %}

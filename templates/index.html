@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> interview preparation assistent</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+</head>
+<body>
+  <div id="app">
+    <h1> interview preparation assistent</h1>
+
+    <section id="resume-section">
+      <h2>1. Upload Resume</h2>
+      <input id="resume-file" type="file" accept=".pdf,.docx,.txt" />
+      <button id="upload-resume">Analyze Resume</button>
+      <div id="resume-result"></div>
+    </section>
+
+    <section id="camera-section">
+      <h2>2. Camera (Emotion)</h2>
+      <video id="video" autoplay playsinline width="480" height="360"></video>
+      <canvas id="capture" style="display:none;"></canvas>
+      <div>
+        <button id="start-camera">Start Streaming</button>
+        <button id="stop-camera">Stop</button>
+        <button id="get-emotion">Analyze Current Frame</button>
+      </div>
+      <div id="emotion-result"></div>
+    </section>
+
+    <section id="questions-section" style="display:none;">
+      <h2>3. Questions</h2>
+      <div id="role-info"></div>
+      <div id="questions-list"></div>
+      <div id="answer-area">
+        <textarea id="user-answer" rows="6" cols="80"></textarea><br/>
+        <button id="submit-answer">Submit Answer (score)</button>
+        <div id="score-result"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .test-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.test-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.test-header h2 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+.test-header p {
+    color: var(--text-light);
+}
+
+.question-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.question-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.q-number {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+.option-container {
+    display: block;
+    position: relative;
+    padding: 15px 15px 15px 50px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    background: var(--gray-50);
+    color: var(--text-dark);
+}
+
+.option-container:hover {
+    background-color: var(--gray-100);
+    border-color: var(--primary-color);
+}
+
+.option-container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.option-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.option-container input:checked ~ .option-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.option-container:has(input:checked) {
+    border-color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.08);
+}
+
+
+.btn-submit {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+</style>
+
+<div class="test-container">
+    <div class="test-header">
+        <h2>{{ role }} Aptitude Test</h2>
+        <p class="text-muted">Answer all questions to complete your assessment</p>
+    </div>
+
+    <form method="POST" action="{{ url_for('submit_aptitude') }}">
+
+        {% for q in questions %}
+        {% set q_index = loop.index0 %}
+        <div class="question-card">
+            <span class="q-number">Question {{ loop.index }}</span>
+            <span class="question-text">{{ q.question }}</span>
+
+            <div class="options-group">
+                {% for key, opt in q.options.items() %}
+                <label class="option-container">
+                    <input type="radio" name="q{{ q_index }}" value="{{ key }}" required>
+                    <span class="checkmark"></span>
+                    <span class="option-label"><strong>{{ key }}.</strong> {{ opt }}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="py-4">
+            <button type="submit" class="btn-submit">
+                Complete & Submit Assessment
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

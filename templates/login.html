@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid px-4 px-lg-5 pt-2">
+
+
+   <div class="container">
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+            <h3 class="hero-title fw-black mb-5">
+                <span class="gradient-text-animated hero-brand">Welcome to</span><br>
+                <span class="gradient-text-animated hero-brand">Shabamorix Hire</span><br>
+                <span class="gradient-text-animated hero-brand">AI-Powered Virtual Interview</span>
+            </h3>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='images/shabamorix-logo.jpeg') }}"
+                 alt="Shabamorix Hire"
+                 class="img-fluid"
+                 width="300">
+        </div>
+
+    </div>
+</div>
+
+
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-11 col-xl-10">
+            <div class="premium-card p-5 border-start border-4 border-primary">
+                <h3 class="h3 fw-bold mb-3" style="color: var(--text-dark);">
+                    About Shabamorix Hire
+                </h3>
+                <p class="lh-lg mb-0" style="color: var(--text-light); font-size: 1.05rem;">
+                    Shabamorix Hire is an AI-powered recruitment assistance platform designed
+                    to simulate real-world hiring environments. The platform helps candidates
+                    evaluate interview readiness through resume analysis, aptitude testing,
+                    AI-driven interviews, and emotion-based performance insights.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-11 col-xl-10">
+            <div class="text-center mb-4">
+                <h3 class="h3 fw-bold" style="color: var(--text-dark);">Contact</h3>
+            </div>
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+                    <div class="premium-card p-4 h-100 border-start border-4 border-primary text-center">
+                        <p class="team-name">Shreyas Pralhad Joshi</p>
+                        <p class="team-meta">📞 +91 81236 36969</p>
+                        <p class="team-email">✉️ shreyaspralhadjoshi@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="premium-card p-4 h-100 border-start border-4 border-warning text-center">
+                        <p class="team-name">Amogh H. L.</p>
+                        <p class="team-meta">📞 +91 93804 60538</p>
+                        <p class="team-email">✉️ amoghlkanth@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="premium-card p-4 h-100 border-start border-4 border-success text-center">
+                        <p class="team-name">Abhishek S</p>
+                        <p class="team-meta">📞 +91 94497 61756</p>
+                        <p class="team-email">✉️ abhishek.sram25@gmail.com</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 col-xl-5">
+            <div class="premium-login-card p-5">
+
+                <div class="text-center mb-4">
+                    <div class="login-icon mb-3 mx-auto">
+                        <i class="fas fa-user-shield fs-1 text-primary"></i>
+                    </div>
+                    <h2 class="fw-bold" style="color: var(--text-dark);">Welcome Back</h2>
+                    <p style="color: var(--text-light);">Sign in to your dashboard</p>
+                </div>
+
+                <form method="POST">
+
+                    <div class="mb-4">
+                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
+                            Username
+                        </label>
+                        <input type="text" class="form-control" name="username" placeholder="Enter your username"
+                            required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
+                            Password
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control border-end-0" id="password" name="password"
+                                placeholder="••••••••" required>
+                            <button type="button" class="btn border-start-0" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold hover-lift">
+                        <i class="fas fa-sign-in-alt me-2"></i>
+                        SIGN IN
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+    .hero-title {
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--text-light);
+    }
+
+    .hero-brand {
+        font-size: 3.6rem;
+        font-weight: 900;
+    }
+
+    .hero-tagline {
+        font-size: 1.25rem;
+        color: var(--text-dark);
+    }
+
+    .team-name {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+        color: var(--text-dark);
+    }
+
+    .team-meta {
+        font-size: 0.95rem;
+        margin-bottom: 2px;
+        color: var(--text-light);
+    }
+
+    .team-email {
+        font-size: 0.9rem;
+        margin-top: 6px;
+        color: var(--text-light);
+    }
+
+    .team-name {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+        color: var(--text-dark);
+    }
+
+    .team-contact,
+    .team-email {
+        font-size: 0.95rem;
+        color: var(--text-light);
+    }
+
+    .premium-card,
+    .premium-login-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px var(--shadow-color);
+    }
+</style>
+
+<script>
+    document.getElementById('togglePassword')?.addEventListener('click', () => {
+        const input = document.getElementById('password');
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+</script>
+
+{% endblock %}

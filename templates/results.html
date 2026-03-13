@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-11">
+
+        <div class="glass-card p-0 overflow-hidden">
+
+        
+            <div class="header-gradient px-5 py-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h2 class="mb-1">Interview Results</h2>
+                        <p class="opacity-75 mb-0">Detailed analysis of your performance</p>
+                    </div>
+                    <div class="score-pill">
+                        {{ total_score }}/{{ max_score }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-5">
+
+            
+                <div class="text-center mb-5">
+                    <div class="circle-wrapper">
+                        <svg width="180" height="180">
+                            <circle class="circle-bg" cx="90" cy="90" r="78" />
+                            <circle class="circle-progress" cx="90" cy="90" r="78" style="stroke-dashoffset:
+                                calc(489 - (489 * {{ (total_score/max_score*100) if max_score>0 else 0 }}) / 100);" />
+                        </svg>
+                        <div class="circle-text">
+                            {{ "%.1f"|format((total_score/max_score*100) if max_score>0 else 0) }}%
+                        </div>
+                    </div>
+
+                    {% set p = (total_score/max_score*100) if max_score>0 else 0 %}
+                    <div class="performance-pill mt-4
+                        {% if p>=85 %}excellent
+                        {% elif p>=70 %}great
+                        {% elif p>=50 %}good
+                        {% else %}improve{% endif %}">
+                        {% if p>=85 %}🏆 Excellent Performance
+                        {% elif p>=70 %}⭐ Great Job
+                        {% elif p>=50 %}👍 Good Effort
+                        {% else %}🔁 Keep Practicing{% endif %}
+                    </div>
+                </div>
+
+            
+                {% if emotion_summary or confidence_score is defined or clarity_score is defined %}
+                <div class="glass-card p-4 mb-5">
+                    <h5 class="mb-4 section-title">Performance Insights</h5>
+
+                    <div class="row g-4">
+                        {% if emotion_summary %}
+                        <div class="col-md-4">
+                            <div class="insight-box">
+                                <h6>Emotion Analysis</h6>
+                                <p>{{ emotion_summary }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if confidence_score is defined %}
+                        <div class="col-md-4">
+                            <div class="insight-box">
+                                <h6>Confidence</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:{{ confidence_score }}%"></div>
+                                </div>
+                                <span>{{ confidence_score }}%</span>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if clarity_score is defined %}
+                        <div class="col-md-4">
+                            <div class="insight-box">
+                                <h6>Clarity</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:{{ clarity_score }}%"></div>
+                                </div>
+                                <span>{{ clarity_score }}%</span>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+
+                
+                <h5 class="mb-3 section-title">Question-wise Analysis</h5>
+
+                <div class="table-responsive glass-card">
+                    <table class="table table-theme mb-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Question</th>
+                                <th>Your Answer</th>
+                                <th>Correct Answer</th>
+                                <th class="text-center">Score</th>
+                                <th class="text-center">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in range(questions|length) %}
+                            <tr>
+                                <td>{{ i+1 }}</td>
+                                <td>{{ questions[i][:60] }}{% if questions[i]|length>60 %}...{% endif %}</td>
+                                <td>{{ user_answers[i] if user_answers and user_answers[i] else "—" }}</td>
+                                <td>{{ correct_answers[i] if correct_answers and correct_answers[i] else "—" }}</td>
+                                <td class="text-center">
+                                    <div class="score-circle">{{ scores[i] }}/5</div>
+                                </td>
+                                <td class="text-center">
+                                    {% if scores[i]>=4 %}✔ Strong
+                                    {% elif scores[i]>=3 %}✓ Good
+                                    {% elif scores[i]>=2 %}⚠ Improve
+                                    {% else %}✖ Weak{% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-outline">Dashboard</a>
+                    <a href="{{ url_for('interview') }}" class="btn btn-primary">Retry Interview</a>
+                    <button onclick="window.print()" class="btn btn-outline">Print</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+
+    .header-gradient {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: #fff;
+    }
+
+    .glass-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px var(--shadow-color);
+    }
+
+    .score-pill {
+        background: rgba(255, 255, 255, .2);
+        padding: 8px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+    }
+
+    .circle-wrapper {
+        position: relative;
+        width: 180px;
+        margin: auto;
+    }
+
+    .circle-bg {
+        fill: none;
+        stroke: var(--border-color);
+        stroke-width: 8;
+    }
+
+    .circle-progress {
+        fill: none;
+        stroke: var(--primary-color);
+        stroke-width: 8;
+        stroke-dasharray: 489;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+    }
+
+    .circle-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .performance-pill {
+        display: inline-block;
+        padding: 10px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+    }
+
+    .performance-pill.excellent {
+        color: #facc15
+    }
+
+    .performance-pill.great {
+        color: #60a5fa
+    }
+
+    .performance-pill.good {
+        color: #34d399
+    }
+
+    .performance-pill.improve {
+        color: #f87171
+    }
+
+    .section-title {
+        font-weight: 600;
+    }
+
+    .insight-box {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .progress {
+        height: 8px;
+        background: var(--gray-100);
+        border-radius: 10px;
+    }
+
+    .progress-bar {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .table-theme th,
+    .table-theme td {
+        background: transparent;
+        color: var(--text-dark);
+        border-color: var(--border-color);
+    }
+
+    .table-theme thead {
+        background: var(--gray-100);
+    }
+
+    .score-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: .85rem;
+        margin: auto;
+    }
+
+    .btn-outline {
+        border: 1px solid var(--border-color);
+        color: var(--text-dark);
+    }
+</style>
+
+{% endblock %}

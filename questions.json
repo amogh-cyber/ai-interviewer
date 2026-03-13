@@ -1,0 +1,251 @@
+{
+  "Python Developer": [
+    "Explain how decorators work in Python.",
+    "What are Python generators and when would you use them?",
+    "Explain the difference between deep copy and shallow copy.",
+    "Describe a project where you used Python multithreading or multiprocessing.",
+    "How do you handle memory management in Python?"
+  ],
+  "Data Scientist": [
+    "Explain bias-variance tradeoff in machine learning.",
+    "How do you handle imbalanced datasets?",
+    "Describe how you would evaluate a regression model.",
+    "Explain feature selection techniques.",
+    "How do you deploy a trained ML model in production?"
+  ],
+  "Frontend Developer": [
+    "Explain the difference between React state and props.",
+    "What is the virtual DOM and how does it work?",
+    "How do you optimize front-end performance?",
+    "Explain responsive design principles.",
+    "Describe how you manage state across components."
+  ],
+  "Backend Developer": [
+    "Explain how you handle authentication and authorization.",
+    "Describe a project where you used JWT for authentication.",
+    "How do you handle caching?",
+    "Explain how you handle rate limiting.",
+    "Describe a project where you used Redis for caching."
+  ],
+  "Full Stack Developer": [
+    "Describe communication between frontend and backend layers.",
+    "How do you secure an API endpoint?",
+    "Explain MVC architecture.",
+    "Describe CI/CD and how you’ve used it.",
+    "What’s your preferred database and why?"
+  ],
+  "Machine Learning Engineer": [
+    "Explain overfitting and underfitting.",
+    "What is gradient descent and how does it work?",
+    "Describe how you would improve a model’s accuracy.",
+    "Explain data preprocessing steps in ML pipelines.",
+    "How do you handle large datasets efficiently?"
+  ],
+  "DevOps Engineer": [
+    "Explain how you handle containerization.",
+    "Describe a project where you used Docker for containerization.",
+    "How do you handle CI/CD?",
+    "Explain how you handle monitoring.",
+    "Describe a project where you used Jenkins for CI/CD."
+  ],
+  "Cloud Engineer": [
+    "Explain how you handle cloud services.",
+    "Describe a project where you used AWS for cloud services.",
+    "How do you handle security?",
+    "Explain how you handle cost optimization.",
+    "Describe a project where you used GCP for cloud services."
+  ],
+  "Java Developer": [
+    "Explain the difference between JDK, JRE, and JVM.",
+    "What are the main features of Java 8 and later versions?",
+    "Explain the concept of Java memory management and garbage collection.",
+    "Describe how you implement multithreading in Java.",
+    "What are Java design patterns you’ve used in projects?"
+  ],
+  "C++ Developer": [
+    "Explain the difference between C++ pointers and references.",
+    "What is RAII (Resource Acquisition Is Initialization) in C++?",
+    "Describe how you manage memory manually in C++.",
+    "Explain the differences between stack and heap memory.",
+    "What are the main differences between C++11/14/17 features?"
+  ],
+  "Mobile App Developer (Android/iOS)": [
+    "Explain the Android Activity lifecycle and its states.",
+    "How do you handle memory leaks in mobile apps?",
+    "Describe how you implement offline data storage.",
+    "Explain the differences between native, hybrid, and cross-platform apps.",
+    "How do you optimize mobile app performance?"
+  ],
+  "QA Engineer": [
+    "Explain the difference between functional and non-functional testing.",
+    "How do you create effective test cases and test plans?",
+    "Describe your experience with automated testing tools.",
+    "Explain how you perform regression testing.",
+    "What is the difference between black-box and white-box testing?"
+  ],
+  "Security Engineer": [
+    "Explain the difference between symmetric and asymmetric encryption.",
+    "How do you secure web applications against common vulnerabilities like XSS or SQL injection?",
+    "Describe your experience with penetration testing.",
+    "What are common network security protocols and how do you implement them?",
+    "Explain how you handle authentication and authorization securely."
+  ],
+
+  "Data Engineer": [
+    "Explain the difference between ETL and ELT processes.",
+    "How do you design a data pipeline for large-scale data processing?",
+    "Describe your experience with SQL and NoSQL databases.",
+    "What are partitioning and indexing, and how do they improve performance?",
+    "Explain how you handle data quality and consistency issues."
+  ],
+  "AI Engineer": [
+    "Explain the difference between supervised, unsupervised, and reinforcement learning.",
+    "How do you handle model overfitting and underfitting?",
+    "Describe your experience with deep learning frameworks like TensorFlow or PyTorch.",
+    "Explain the concept of neural network architectures (CNN, RNN, Transformer).",
+    "How do you deploy and monitor AI models in production?"
+  ],
+  "UI/UX Designer (Tech-related)": [
+    "Explain the difference between UI and UX design.",
+    "How do you conduct user research and usability testing?",
+    "Describe your process for designing responsive interfaces.",
+    "What tools do you use for wireframing and prototyping?",
+    "How do you incorporate accessibility standards into your designs?"
+  ],
+  "Database Administrator": [
+    "Explain the differences between relational and non-relational databases.",
+    "How do you perform database backup and recovery?",
+    "Describe how you optimize SQL queries for performance.",
+    "What are database indexing strategies and when would you use them?",
+    "Explain how you handle database security and user access control."
+  ],
+  "Network Engineer": [
+    "Explain the OSI and TCP/IP models and their differences.",
+    "How do you configure and troubleshoot routers and switches?",
+    "Describe your experience with VPNs, firewalls, and network security.",
+    "What is subnetting and how do you calculate subnets?",
+    "Explain how you monitor network performance and resolve bottlenecks."
+  ],
+
+  "Embedded Software Engineer": [
+    "Explain the differences between microcontrollers and microprocessors.",
+    "How do you handle real-time constraints in embedded systems?",
+    "Describe your experience with C/C++ for embedded programming.",
+    "What is interrupt handling and how do you implement it?",
+    "Explain memory management in resource-constrained devices."
+  ],
+  "Game Developer": [
+    "Describe your experience with game engines like Unity or Unreal Engine.",
+    "How do you optimize game performance and rendering?",
+    "Explain collision detection and physics simulation in games.",
+    "How do you implement AI behavior for game characters?",
+    "Describe how you handle multiplayer networking in games."
+  ],
+  "Blockchain Developer": [
+    "Explain the differences between public, private, and consortium blockchains.",
+    "Describe your experience with smart contracts and Solidity.",
+    "How do you ensure security in blockchain applications?",
+    "Explain consensus algorithms like Proof of Work and Proof of Stake.",
+    "Describe a project where you implemented blockchain technology."
+  ],
+  "Site Reliability Engineer (SRE)": [
+    "Explain the concept of SRE and how it differs from DevOps.",
+    "How do you measure and improve system reliability and uptime?",
+    "Describe your experience with monitoring and alerting tools.",
+    "How do you handle incident management and postmortems?",
+    "Explain load balancing and fault-tolerant system design."
+  ],
+  "Frontend Framework Specialists (Angular, Vue)": [
+    "Explain the differences between Angular and Vue.js.",
+    "How do you manage state in large frontend applications?",
+    "Describe your experience with component-based architecture.",
+    "How do you optimize frontend performance in single-page applications?",
+    "Explain how you implement routing and navigation in Angular/Vue."
+  ],
+  "ERP Developer": [
+    "Explain the modules of an ERP system and their integration.",
+    "Describe your experience with ERP platforms like SAP or Oracle.",
+    "How do you customize ERP workflows for specific business needs?",
+    "Explain how you handle ERP data migration and system upgrades.",
+    "Describe your experience with ERP reporting and analytics."
+  ],
+
+  "Salesforce Developer": [
+    "Explain the differences between Salesforce Lightning and Classic.",
+    "How do you create custom objects, fields, and workflows in Salesforce?",
+    "Describe your experience with Apex and Visualforce development.",
+    "How do you integrate Salesforce with external systems?",
+    "Explain how you handle security and permission management in Salesforce."
+  ],
+  "Robotics Engineer": [
+    "Explain the difference between kinematics and dynamics in robotics.",
+    "Describe your experience with robot operating systems (ROS).",
+    "How do you implement sensor integration and control algorithms?",
+    "Explain path planning and motion control techniques.",
+    "Describe how you handle real-time processing in robotic systems."
+  ],
+  "System Analyst": [
+    "Explain how you gather and document system requirements.",
+    "Describe your experience with UML diagrams and modeling.",
+    "How do you perform system feasibility and cost analysis?",
+    "Explain how you manage system testing and validation.",
+    "Describe your approach to communicating between technical and non-technical stakeholders."
+  ],
+  "Firmware Engineer": [
+    "Explain the difference between firmware and software.",
+    "Describe your experience with embedded C/C++ for firmware development.",
+    "How do you handle low-level hardware interfaces and drivers?",
+    "Explain how you debug and test firmware on target devices.",
+    "Describe your approach to optimizing firmware for performance and memory."
+  ],
+  "AR/VR Developer": [
+    "Explain the differences between AR, VR, and MR technologies.",
+    "Describe your experience with AR/VR frameworks like Unity or Unreal Engine.",
+    "How do you handle 3D rendering and optimization for immersive experiences?",
+    "Explain how you implement user interaction in AR/VR applications.",
+    "Describe a project where you integrated AR/VR with sensors or IoT devices."
+  ],
+  "Test Automation Engineer": [
+    "Explain the difference between manual testing and automated testing.",
+    "Describe your experience with test automation tools like Selenium or Cypress.",
+    "How do you design maintainable and scalable automated test scripts?",
+    "Explain how you integrate automated tests into CI/CD pipelines.",
+    "Describe how you handle flaky tests and test failures in automation."
+  ],
+
+  "Business Intelligence Developer": [
+    "Explain the differences between OLAP and OLTP systems.",
+    "Describe your experience with BI tools like Power BI, Tableau, or QlikView.",
+    "How do you design data models and dashboards for business reporting?",
+    "Explain how you handle data extraction, transformation, and loading (ETL).",
+    "Describe your approach to performance optimization in BI reports."
+  ],
+  "API Developer": [
+    "Explain the differences between RESTful and SOAP APIs.",
+    "How do you design and document an API for external developers?",
+    "Describe how you handle authentication and authorization in APIs.",
+    "Explain versioning strategies for APIs.",
+    "How do you optimize API performance and handle rate limiting?"
+  ],
+  "SAP Consultant": [
+    "Explain the different SAP modules and their business functions.",
+    "Describe your experience with SAP implementation and customization.",
+    "How do you perform data migration in SAP projects?",
+    "Explain how you configure SAP workflows and reports.",
+    "Describe a project where you integrated SAP with other enterprise systems."
+  ],
+  "Site Architect (Web Applications)": [
+    "Explain how you design scalable web application architectures.",
+    "Describe your experience with frontend-backend integration.",
+    "How do you handle security and authentication in web apps?",
+    "Explain how you choose between monolithic and microservices architectures.",
+    "Describe your approach to performance optimization and caching."
+  ],
+  "Python Automation Engineer": [
+    "Explain how you use Python for process automation.",
+    "Describe your experience with libraries like Selenium, PyAutoGUI, or Requests.",
+    "How do you handle scheduling and exception handling in automation scripts?",
+    "Explain how you design reusable and modular automation code.",
+    "Describe a project where you automated a complex workflow using Python."
+  ]
+}

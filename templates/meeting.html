@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interview | Live</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #3b82f6;
+            --danger: #ef4444;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            /* Prevent scrolling during meeting */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header */
+        .meeting-header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .live-indicator {
+            background: var(--danger);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+    
+        .video-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        
+            transform: scaleX(-1);
+            
+        }
+
+        .name-tag {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+    
+        .controls {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        .control-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            background: var(--card-bg);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .control-btn.end-call {
+            background: var(--danger);
+        }
+
+        .control-btn.end-call:hover {
+            background: #b91c1c;
+        }
+
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="meeting-header">
+        <div>
+            <h2 style="margin:0; font-size: 1.2rem;"> Interview Room</h2>
+            <small class="text-muted" id="room-id"></small>
+        </div>
+        <div class="live-indicator">● Live</div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-wrapper">
+            <video id="localVideo" autoplay muted playsinline></video>
+            <div class="name-tag">Interviewee</div>
+        </div>
+
+        <div class="video-wrapper">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <div class="name-tag">Candidate</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        
+        <button class="control-btn end-call" onclick="location.href='/logout'" title="End Interview">
+            <i class="bi bi-telephone-x"></i>
+        </button>
+    </div>
+
+    <script>
+        const room = location.pathname.split("/").pop();
+        document.getElementById('room-id').innerText = "ID: " + room;
+        const socket = io();
+
+        const localVideo = document.getElementById("localVideo");
+        const remoteVideo = document.getElementById("remoteVideo");
+
+        const peer = new RTCPeerConnection({
+            iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+        });
+
+        let isCaller = false;
+
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then(stream => {
+                localVideo.srcObject = stream;
+                stream.getTracks().forEach(track => peer.addTrack(track, stream));
+            });
+
+        peer.ontrack = event => {
+            remoteVideo.srcObject = event.streams[0];
+        };
+
+        peer.onicecandidate = event => {
+            if (event.candidate) {
+                socket.emit("ice-candidate", { room, candidate: event.candidate });
+            }
+        };
+
+        socket.emit("join", { room });
+
+        socket.on("user-joined", async () => {
+            isCaller = true;
+            const offer = await peer.createOffer();
+            await peer.setLocalDescription(offer);
+            socket.emit("offer", { room, offer });
+        });
+
+        socket.on("offer", async data => {
+            if (!isCaller) {
+                await peer.setRemoteDescription(new RTCSessionDescription(data.offer));
+                const answer = await peer.createAnswer();
+                await peer.setLocalDescription(answer);
+                socket.emit("answer", { room, answer });
+            }
+        });
+
+        socket.on("answer", async data => {
+            await peer.setRemoteDescription(new RTCSessionDescription(data.answer));
+        });
+
+        socket.on("ice-candidate", data => {
+            peer.addIceCandidate(new RTCIceCandidate(data.candidate));
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2727 @@
+{
+    "Python Developer": [
+        {
+            "question": "What is the output of bool([])?",
+            "options": {
+                "A": "True",
+                "B": "False",
+                "C": "None",
+                "D": "Error"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which data type is immutable?",
+            "options": {
+                "A": "List",
+                "B": "Set",
+                "C": "Dict",
+                "D": "Tuple"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "question": "What does len('Python') return?",
+            "options": {
+                "A": "5",
+                "B": "6",
+                "C": "7",
+                "D": "Error"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which keyword is used to handle exceptions?",
+            "options": {
+                "A": "catch",
+                "B": "error",
+                "C": "try",
+                "D": "handle"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which operator is used for exponentiation?",
+            "options": {
+                "A": "^",
+                "B": "**",
+                "C": "//",
+                "D": "%"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which function converts list to set?",
+            "options": {
+                "A": "list()",
+                "B": "tuple()",
+                "C": "set()",
+                "D": "dict()"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which is a valid variable name?",
+            "options": {
+                "A": "1var",
+                "B": "var_1",
+                "C": "var-1",
+                "D": "@var"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "What is the index of first element?",
+            "options": {
+                "A": "0",
+                "B": "1",
+                "C": "-1",
+                "D": "Depends"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which module is used for math operations?",
+            "options": {
+                "A": "math",
+                "B": "calc",
+                "C": "numeric",
+                "D": "numbers"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "What does type(None) return?",
+            "options": {
+                "A": "None",
+                "B": "null",
+                "C": "NoneType",
+                "D": "void"
+            },
+            "correct_answer": "C"
+        }
+    ],
+    "General Aptitude": [
+        {
+            "question": "If the product of two positive integers is 2025 and their LCM is 135, what is their GCD?",
+            "options": {
+                "A": "5",
+                "B": "9",
+                "C": "15",
+                "D": "45"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "A number when divided by 7 leaves a remainder 3. What remainder will the square of that number leave when divided by 7?",
+            "options": {
+                "A": "1",
+                "B": "2",
+                "C": "4",
+                "D": "5"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "If logₐ(x) = 1/2 and logₓ(a) = 1/3, then the value of logₐ(x³) is:",
+            "options": {
+                "A": "1/2",
+                "B": "1",
+                "C": "3/2",
+                "D": "2"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "In a family of six persons A, B, C, D, E and F, there are two married couples. D is the brother of A and father of E. C is the wife of A. Who is the mother of F?",
+            "options": {
+                "A": "A",
+                "B": "B",
+                "C": "C",
+                "D": "D"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "If all ZORPS are BLIPS and no BLIP is a SNOP, which conclusion is logically valid?",
+            "options": {
+                "A": "All ZORPS are SNOPS",
+                "B": "Some ZORPS are SNOPS",
+                "C": "No ZORP is a SNOP",
+                "D": "Some SNOPS are ZORPS"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Find the missing number in the series: 3, 10, 29, 66, ?",
+            "options": {
+                "A": "127",
+                "B": "131",
+                "C": "134",
+                "D": "145"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Five people P, Q, R, S, T are sitting in a row facing north. P is not at the ends. Q is to the immediate right of R. S is to the left of P but not adjacent. Who is sitting at the extreme left?",
+            "options": {
+                "A": "P",
+                "B": "Q",
+                "C": "R",
+                "D": "S"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "question": "If the word INTELLIGENCE is rearranged, what is the minimum number of letters that must change position to make it a palindrome?",
+            "options": {
+                "A": "2",
+                "B": "3",
+                "C": "4",
+                "D": "5"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "A clock gains 5 minutes every hour. If it is set correct at 10:00 AM, what time will it show at 10:00 PM the same day?",
+            "options": {
+                "A": "11:00 PM",
+                "B": "12:00 AM",
+                "C": "1:00 AM",
+                "D": "2:00 AM"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which option represents a valid conclusion: If A > B, B > C, and C > D?",
+            "options": {
+                "A": "D > A",
+                "B": "A > D",
+                "C": "B = D",
+                "D": "C > A"
+            },
+            "correct_answer": "B"
+        }
+    ]
+,
+    "Data Scientist": [
+        {
+            "question": "Which metric is best for imbalanced data?",
+            "options": {
+                "A": "Accuracy",
+                "B": "Precision",
+                "C": "Recall",
+                "D": "F1-score"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "question": "Which library is used for data analysis?",
+            "options": {
+                "A": "NumPy",
+                "B": "Pandas",
+                "C": "TensorFlow",
+                "D": "Keras"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "What does PCA reduce?",
+            "options": {
+                "A": "Noise",
+                "B": "Overfitting",
+                "C": "Dimensions",
+                "D": "Bias"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which plot shows distribution?",
+            "options": {
+                "A": "Line",
+                "B": "Scatter",
+                "C": "Histogram",
+                "D": "Bar"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Overfitting means?",
+            "options": {
+                "A": "High bias",
+                "B": "High variance",
+                "C": "Low accuracy",
+                "D": "Balanced"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which is supervised learning?",
+            "options": {
+                "A": "KMeans",
+                "B": "Apriori",
+                "C": "Linear Regression",
+                "D": "PCA"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which handles missing values?",
+            "options": {
+                "A": "Drop",
+                "B": "Mean",
+                "C": "Median",
+                "D": "All"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "question": "ROC curve plots?",
+            "options": {
+                "A": "Accuracy",
+                "B": "Loss",
+                "C": "TPR vs FPR",
+                "D": "Precision"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which scale is categorical?",
+            "options": {
+                "A": "Interval",
+                "B": "Ratio",
+                "C": "Nominal",
+                "D": "Ordinal"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which library is for visualization?",
+            "options": {
+                "A": "Sklearn",
+                "B": "Seaborn",
+                "C": "Scipy",
+                "D": "Stats"
+            },
+            "correct_answer": "B"
+        }
+    ],
+    "Frontend Developer": [
+        {
+            "question": "Which language runs in browser?",
+            "options": {
+                "A": "Python",
+                "B": "Java",
+                "C": "JavaScript",
+                "D": "C++"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "CSS stands for?",
+            "options": {
+                "A": "Cascading Style Sheets",
+                "B": "Color Style Sheet",
+                "C": "Creative Style",
+                "D": "Code Style"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which tag is used for links?",
+            "options": {
+                "A": "<link>",
+                "B": "<a>",
+                "C": "<href>",
+                "D": "<url>"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which is frontend framework?",
+            "options": {
+                "A": "Django",
+                "B": "React",
+                "C": "Flask",
+                "D": "Spring"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which unit is responsive?",
+            "options": {
+                "A": "px",
+                "B": "cm",
+                "C": "%",
+                "D": "pt"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "What does DOM stand for?",
+            "options": {
+                "A": "Data Object Model",
+                "B": "Document Object Model",
+                "C": "Design Object Model",
+                "D": "Dynamic Object Model"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which handles state?",
+            "options": {
+                "A": "HTML",
+                "B": "CSS",
+                "C": "JavaScript",
+                "D": "SQL"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which is SPA?",
+            "options": {
+                "A": "Multi page",
+                "B": "React app",
+                "C": "Static site",
+                "D": "PHP site"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which improves performance?",
+            "options": {
+                "A": "Minification",
+                "B": "Large images",
+                "C": "Inline CSS",
+                "D": "Blocking JS"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which tool bundles frontend code?",
+            "options": {
+                "A": "Webpack",
+                "B": "Docker",
+                "C": "Git",
+                "D": "Jenkins"
+            },
+            "correct_answer": "A"
+        }
+    ],
+    "Backend Developer": [
+        {
+            "question": "Which handles server logic?",
+            "options": {
+                "A": "HTML",
+                "B": "CSS",
+                "C": "Backend",
+                "D": "Browser"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which is backend language?",
+            "options": {
+                "A": "HTML",
+                "B": "CSS",
+                "C": "Python",
+                "D": "Bootstrap"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "REST uses which protocol?",
+            "options": {
+                "A": "FTP",
+                "B": "SMTP",
+                "C": "HTTP",
+                "D": "TCP"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which status code means success?",
+            "options": {
+                "A": "200",
+                "B": "404",
+                "C": "500",
+                "D": "401"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "JWT is used for?",
+            "options": {
+                "A": "Storage",
+                "B": "Authentication",
+                "C": "Caching",
+                "D": "Routing"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which DB is NoSQL?",
+            "options": {
+                "A": "MySQL",
+                "B": "PostgreSQL",
+                "C": "MongoDB",
+                "D": "Oracle"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which handles API requests?",
+            "options": {
+                "A": "Controller",
+                "B": "View",
+                "C": "Model",
+                "D": "CSS"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which improves performance?",
+            "options": {
+                "A": "Caching",
+                "B": "More queries",
+                "C": "No index",
+                "D": "Large payload"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which tool tests APIs?",
+            "options": {
+                "A": "Postman",
+                "B": "Figma",
+                "C": "VSCode",
+                "D": "Chrome"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which architecture separates logic?",
+            "options": {
+                "A": "MVC",
+                "B": "Monolithic",
+                "C": "Flat",
+                "D": "Script"
+            },
+            "correct_answer": "A"
+        }
+    ],
+    "Full Stack Developer": [
+        {
+            "question": "Full stack means?",
+            "options": {
+                "A": "Frontend only",
+                "B": "Backend only",
+                "C": "Both",
+                "D": "Design only"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which handles UI?",
+            "options": {
+                "A": "Backend",
+                "B": "Frontend",
+                "C": "Database",
+                "D": "Server"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which handles DB?",
+            "options": {
+                "A": "Frontend",
+                "B": "Backend",
+                "C": "CSS",
+                "D": "HTML"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which DB is relational?",
+            "options": {
+                "A": "MongoDB",
+                "B": "Redis",
+                "C": "MySQL",
+                "D": "Cassandra"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "question": "Which secures API?",
+            "options": {
+                "A": "JWT",
+                "B": "HTML",
+                "C": "CSS",
+                "D": "XML"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which version control?",
+            "options": {
+                "A": "Docker",
+                "B": "Git",
+                "C": "Jenkins",
+                "D": "AWS"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which deploys app?",
+            "options": {
+                "A": "CI/CD",
+                "B": "IDE",
+                "C": "Compiler",
+                "D": "Debugger"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "question": "Which stack uses JS?",
+            "options": {
+                "A": "LAMP",
+                "B": "MEAN",
+                "C": "WAMP",
+                "D": "XAMPP"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which improves scalability?",
+            "options": {
+                "A": "Monolith",
+                "B": "Microservices",
+                "C": "Static",
+                "D": "Hardcoding"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "question": "Which tests full flow?",
+            "options": {
+                "A": "Unit",
+                "B": "Integration",
+                "C": "End-to-end",
+                "D": "Smoke"
+            },
+            "correct_answer": "C"
+        }
+    ]
+
+
+,
+"Mobile App Developer (Android/iOS)": [
+  {"question":"Which component represents a single screen in Android?","options":{"A":"Service","B":"Activity","C":"Intent","D":"Fragment"},"correct_answer":"B"},
+  {"question":"Which language is officially supported for Android?","options":{"A":"Swift","B":"Objective-C","C":"Kotlin","D":"Dart"},"correct_answer":"C"},
+  {"question":"Which storage is best for small key-value data?","options":{"A":"SQLite","B":"SharedPreferences","C":"File","D":"Room"},"correct_answer":"B"},
+  {"question":"Which iOS lifecycle method is called when view loads?","options":{"A":"viewWillAppear","B":"viewDidLoad","C":"viewDidAppear","D":"viewWillDisappear"},"correct_answer":"B"},
+  {"question":"Which layout arranges views vertically/horizontally?","options":{"A":"RelativeLayout","B":"ConstraintLayout","C":"LinearLayout","D":"FrameLayout"},"correct_answer":"C"},
+  {"question":"Which tool profiles app performance?","options":{"A":"ADB","B":"Logcat","C":"Profiler","D":"Gradle"},"correct_answer":"C"},
+  {"question":"Which handles background work in Android?","options":{"A":"Activity","B":"Service","C":"Intent","D":"View"},"correct_answer":"B"},
+  {"question":"Which is cross-platform?","options":{"A":"SwiftUI","B":"Jetpack","C":"Flutter","D":"UIKit"},"correct_answer":"C"},
+  {"question":"Which file defines app permissions?","options":{"A":"build.gradle","B":"AndroidManifest.xml","C":"MainActivity","D":"strings.xml"},"correct_answer":"B"},
+  {"question":"Which improves UI performance?","options":{"A":"Overdraw","B":"Layout optimization","C":"Large images","D":"Blocking calls"},"correct_answer":"B"}
+],
+
+"QA Engineer": [
+  {"question":"Which testing checks new changes?","options":{"A":"Smoke","B":"Regression","C":"Unit","D":"Alpha"},"correct_answer":"B"},
+  {"question":"Black-box testing focuses on?","options":{"A":"Code","B":"UI","C":"Internal logic","D":"Implementation"},"correct_answer":"B"},
+  {"question":"Which is non-functional testing?","options":{"A":"Unit","B":"Integration","C":"Performance","D":"System"},"correct_answer":"C"},
+  {"question":"Test case includes?","options":{"A":"Input","B":"Expected result","C":"Steps","D":"All"},"correct_answer":"D"},
+  {"question":"Automation tool?","options":{"A":"Postman","B":"Selenium","C":"JMeter","D":"Figma"},"correct_answer":"B"},
+  {"question":"Bug life cycle starts with?","options":{"A":"Assigned","B":"Closed","C":"New","D":"Fixed"},"correct_answer":"C"},
+  {"question":"Which testing is done first?","options":{"A":"System","B":"Integration","C":"Unit","D":"UAT"},"correct_answer":"C"},
+  {"question":"Severity relates to?","options":{"A":"Priority","B":"Impact","C":"Frequency","D":"Count"},"correct_answer":"B"},
+  {"question":"Which document defines scope?","options":{"A":"Test plan","B":"Test case","C":"Bug report","D":"Checklist"},"correct_answer":"A"},
+  {"question":"Which validates user needs?","options":{"A":"Verification","B":"Validation","C":"Inspection","D":"Review"},"correct_answer":"B"}
+],
+
+"Security Engineer": [
+  {"question":"Which attack injects scripts?","options":{"A":"CSRF","B":"XSS","C":"DDoS","D":"MITM"},"correct_answer":"B"},
+  {"question":"Which encrypts data with two keys?","options":{"A":"Hashing","B":"Symmetric","C":"Asymmetric","D":"Encoding"},"correct_answer":"C"},
+  {"question":"Which prevents SQL Injection?","options":{"A":"String concat","B":"Prepared statements","C":"Plain queries","D":"Comments"},"correct_answer":"B"},
+  {"question":"HTTPS uses which protocol?","options":{"A":"SSL/TLS","B":"FTP","C":"SMTP","D":"SSH"},"correct_answer":"A"},
+  {"question":"Firewall works at?","options":{"A":"Application","B":"Transport","C":"Network","D":"Physical"},"correct_answer":"C"},
+  {"question":"Which stores passwords securely?","options":{"A":"Plain text","B":"MD5","C":"Hash + salt","D":"Base64"},"correct_answer":"C"},
+  {"question":"Least privilege means?","options":{"A":"All access","B":"Minimal access","C":"Admin only","D":"Guest"},"correct_answer":"B"},
+  {"question":"Which scans vulnerabilities?","options":{"A":"Nmap","B":"Wireshark","C":"Metasploit","D":"Burp"},"correct_answer":"A"},
+  {"question":"OWASP Top 10 is about?","options":{"A":"Networking","B":"Web risks","C":"OS","D":"DB"},"correct_answer":"B"},
+  {"question":"Which detects intrusion?","options":{"A":"IDS","B":"VPN","C":"NAT","D":"Proxy"},"correct_answer":"A"}
+],
+
+"Data Engineer": [
+  {"question":"ETL stands for?","options":{"A":"Extract Transform Load","B":"Enter Transfer Load","C":"Extract Transfer Link","D":"Encode Transform Load"},"correct_answer":"A"},
+  {"question":"Which is columnar DB?","options":{"A":"MySQL","B":"PostgreSQL","C":"Redshift","D":"MongoDB"},"correct_answer":"C"},
+  {"question":"Which handles streaming?","options":{"A":"Hadoop","B":"Spark Streaming","C":"Hive","D":"Sqoop"},"correct_answer":"B"},
+  {"question":"Partitioning improves?","options":{"A":"Security","B":"Performance","C":"Backup","D":"Latency only"},"correct_answer":"B"},
+  {"question":"Which is NoSQL?","options":{"A":"Oracle","B":"MySQL","C":"Cassandra","D":"Postgres"},"correct_answer":"C"},
+  {"question":"Which tool moves data from RDBMS to HDFS?","options":{"A":"Hive","B":"Sqoop","C":"Flume","D":"Oozie"},"correct_answer":"B"},
+  {"question":"Schema-on-read is used in?","options":{"A":"RDBMS","B":"Data lake","C":"OLTP","D":"OLAP"},"correct_answer":"B"},
+  {"question":"Which file format is columnar?","options":{"A":"CSV","B":"JSON","C":"Parquet","D":"XML"},"correct_answer":"C"},
+  {"question":"Which ensures data quality?","options":{"A":"Validation","B":"Indexing","C":"Caching","D":"Replication"},"correct_answer":"A"},
+  {"question":"Which query engine is distributed?","options":{"A":"MySQL","B":"Presto","C":"SQLite","D":"PL/SQL"},"correct_answer":"B"}
+],
+
+"AI Engineer": [
+  {"question":"Which learning uses rewards?","options":{"A":"Supervised","B":"Unsupervised","C":"Reinforcement","D":"Semi-supervised"},"correct_answer":"C"},
+  {"question":"CNNs are best for?","options":{"A":"Text","B":"Images","C":"Tabular","D":"Audio"},"correct_answer":"B"},
+  {"question":"Which handles sequences?","options":{"A":"CNN","B":"RNN","C":"SVM","D":"KNN"},"correct_answer":"B"},
+  {"question":"Transformer uses?","options":{"A":"Pooling","B":"Attention","C":"Convolution","D":"Recursion"},"correct_answer":"B"},
+  {"question":"Which framework for DL?","options":{"A":"Scikit-learn","B":"TensorFlow","C":"Pandas","D":"NumPy"},"correct_answer":"B"},
+  {"question":"Overfitting is reduced by?","options":{"A":"More layers","B":"Regularization","C":"More epochs","D":"High LR"},"correct_answer":"B"},
+  {"question":"Which metric for classification?","options":{"A":"MSE","B":"RMSE","C":"F1-score","D":"MAE"},"correct_answer":"C"},
+  {"question":"Which step cleans data?","options":{"A":"Inference","B":"Preprocessing","C":"Deployment","D":"Monitoring"},"correct_answer":"B"},
+  {"question":"Which serves models at scale?","options":{"A":"TensorFlow Serving","B":"Jupyter","C":"Colab","D":"VSCode"},"correct_answer":"A"},
+  {"question":"Which monitors drift?","options":{"A":"Logging","B":"Model monitoring","C":"Training","D":"Labeling"},"correct_answer":"B"}
+]
+,
+
+"UI/UX Designer (Tech-related)": [
+    {
+        "question": "UI mainly focuses on?",
+        "options": {
+            "A": "User research",
+            "B": "Visual design",
+            "C": "Backend",
+            "D": "Database"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "UX primarily deals with?",
+        "options": {
+            "A": "Colors",
+            "B": "Typography",
+            "C": "User experience",
+            "D": "Icons"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which tool is used for prototyping?",
+        "options": {
+            "A": "VS Code",
+            "B": "Figma",
+            "C": "MySQL",
+            "D": "Postman"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Wireframes represent?",
+        "options": {
+            "A": "Final UI",
+            "B": "Design structure",
+            "C": "Code",
+            "D": "Database"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which principle improves accessibility?",
+        "options": {
+            "A": "Low contrast",
+            "B": "Small fonts",
+            "C": "High contrast",
+            "D": "Hidden labels"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which testing validates usability?",
+        "options": {
+            "A": "Unit testing",
+            "B": "Usability testing",
+            "C": "Load testing",
+            "D": "Regression"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which law states users scan in F-shape?",
+        "options": {
+            "A": "Hick’s Law",
+            "B": "Fitts’s Law",
+            "C": "Jakob’s Law",
+            "D": "Miller’s Law"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Consistency in UI helps?",
+        "options": {
+            "A": "Confusion",
+            "B": "Learning curve",
+            "C": "Usability",
+            "D": "Latency"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Persona represents?",
+        "options": {
+            "A": "Developer",
+            "B": "Admin",
+            "C": "Target user",
+            "D": "Tester"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which improves navigation clarity?",
+        "options": {
+            "A": "Deep menus",
+            "B": "Breadcrumbs",
+            "C": "Popups",
+            "D": "Animations"
+        },
+        "correct_answer": "B"
+    }
+],
+"Database Administrator": [
+    {
+        "question": "Which DB is relational?",
+        "options": {
+            "A": "MongoDB",
+            "B": "Redis",
+            "C": "MySQL",
+            "D": "Cassandra"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Primary key ensures?",
+        "options": {
+            "A": "Duplicates",
+            "B": "Uniqueness",
+            "C": "Indexing",
+            "D": "Sorting"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which improves query speed?",
+        "options": {
+            "A": "Triggers",
+            "B": "Indexes",
+            "C": "Views",
+            "D": "Constraints"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Normalization reduces?",
+        "options": {
+            "A": "Redundancy",
+            "B": "Security",
+            "C": "Latency",
+            "D": "Throughput"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Which backup is fastest restore?",
+        "options": {
+            "A": "Full",
+            "B": "Incremental",
+            "C": "Differential",
+            "D": "Snapshot"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "ACID ensures?",
+        "options": {
+            "A": "Scalability",
+            "B": "Consistency",
+            "C": "Availability",
+            "D": "Latency"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which handles permissions?",
+        "options": {
+            "A": "Indexes",
+            "B": "Roles",
+            "C": "Tables",
+            "D": "Triggers"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Deadlock occurs when?",
+        "options": {
+            "A": "No index",
+            "B": "Circular wait",
+            "C": "Large table",
+            "D": "Backup"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which isolates transactions?",
+        "options": {
+            "A": "View",
+            "B": "Constraint",
+            "C": "Isolation level",
+            "D": "Schema"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which DB supports JSON well?",
+        "options": {
+            "A": "PostgreSQL",
+            "B": "SQLite",
+            "C": "Oracle",
+            "D": "MariaDB"
+        },
+        "correct_answer": "A"
+    }
+],
+"Network Engineer": [
+    {
+        "question": "OSI has how many layers?",
+        "options": {
+            "A": "5",
+            "B": "6",
+            "C": "7",
+            "D": "8"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "IP works at which layer?",
+        "options": {
+            "A": "Application",
+            "B": "Transport",
+            "C": "Network",
+            "D": "Data Link"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which device routes packets?",
+        "options": {
+            "A": "Switch",
+            "B": "Router",
+            "C": "Hub",
+            "D": "Repeater"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Subnetting is used to?",
+        "options": {
+            "A": "Encrypt",
+            "B": "Segment network",
+            "C": "Route",
+            "D": "Monitor"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which protocol is connection-oriented?",
+        "options": {
+            "A": "UDP",
+            "B": "IP",
+            "C": "TCP",
+            "D": "ICMP"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Firewall primarily provides?",
+        "options": {
+            "A": "Routing",
+            "B": "Security",
+            "C": "Switching",
+            "D": "Caching"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "DNS converts?",
+        "options": {
+            "A": "IP to MAC",
+            "B": "MAC to IP",
+            "C": "Name to IP",
+            "D": "IP to Name"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which is private IP?",
+        "options": {
+            "A": "8.8.8.8",
+            "B": "192.168.1.1",
+            "C": "1.1.1.1",
+            "D": "54.2.1.1"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "VPN ensures?",
+        "options": {
+            "A": "Speed",
+            "B": "Encryption",
+            "C": "Routing",
+            "D": "Caching"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which monitors traffic?",
+        "options": {
+            "A": "Wireshark",
+            "B": "Putty",
+            "C": "Ping",
+            "D": "FTP"
+        },
+        "correct_answer": "A"
+    }
+],
+"Embedded Software Engineer": [
+    {
+        "question": "Which is real-time OS?",
+        "options": {
+            "A": "Windows",
+            "B": "Linux",
+            "C": "FreeRTOS",
+            "D": "macOS"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Microcontroller includes?",
+        "options": {
+            "A": "CPU only",
+            "B": "CPU + peripherals",
+            "C": "RAM only",
+            "D": "GPU"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which language used mostly?",
+        "options": {
+            "A": "Java",
+            "B": "Python",
+            "C": "C",
+            "D": "Ruby"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Interrupt is used for?",
+        "options": {
+            "A": "Delay",
+            "B": "Polling",
+            "C": "Immediate response",
+            "D": "Loop"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "GPIO stands for?",
+        "options": {
+            "A": "General IO",
+            "B": "Global IO",
+            "C": "General Purpose IO",
+            "D": "Graphical IO"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which memory is non-volatile?",
+        "options": {
+            "A": "RAM",
+            "B": "Cache",
+            "C": "Flash",
+            "D": "Register"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Timer used for?",
+        "options": {
+            "A": "Power",
+            "B": "Delays",
+            "C": "Display",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which bus connects peripherals?",
+        "options": {
+            "A": "I2C",
+            "B": "HTTP",
+            "C": "FTP",
+            "D": "SMTP"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Bare-metal means?",
+        "options": {
+            "A": "With OS",
+            "B": "No OS",
+            "C": "Virtual",
+            "D": "Cloud"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Watchdog timer prevents?",
+        "options": {
+            "A": "Overflow",
+            "B": "Deadlock",
+            "C": "System hang",
+            "D": "Crash only"
+        },
+        "correct_answer": "C"
+    }
+],
+"Game Developer": [
+    {
+        "question": "Which engine is popular?",
+        "options": {
+            "A": "Django",
+            "B": "Unity",
+            "C": "Flask",
+            "D": "Spring"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "FPS stands for?",
+        "options": {
+            "A": "Frames Per Second",
+            "B": "First Person Server",
+            "C": "Fast Processing System",
+            "D": "File Process Speed"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Physics engine handles?",
+        "options": {
+            "A": "Textures",
+            "B": "AI",
+            "C": "Collisions",
+            "D": "UI"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which language used in Unity?",
+        "options": {
+            "A": "Python",
+            "B": "C#",
+            "C": "Java",
+            "D": "C"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Game loop controls?",
+        "options": {
+            "A": "Rendering",
+            "B": "Input",
+            "C": "Update cycle",
+            "D": "Sound"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "NPC means?",
+        "options": {
+            "A": "Network Player",
+            "B": "Non-Playable Character",
+            "C": "New Player Control",
+            "D": "Node Processing Core"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which improves rendering speed?",
+        "options": {
+            "A": "Overdraw",
+            "B": "Batching",
+            "C": "High poly",
+            "D": "Large textures"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Pathfinding algorithm?",
+        "options": {
+            "A": "DFS",
+            "B": "A*",
+            "C": "Binary",
+            "D": "Hash"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Multiplayer sync uses?",
+        "options": {
+            "A": "HTTP",
+            "B": "UDP",
+            "C": "SMTP",
+            "D": "FTP"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which handles assets?",
+        "options": {
+            "A": "Asset pipeline",
+            "B": "Compiler",
+            "C": "Debugger",
+            "D": "Profiler"
+        },
+        "correct_answer": "A"
+    }
+]
+
+,
+"Blockchain Developer": [
+    {
+        "question": "Blockchain is mainly a?",
+        "options": {
+            "A": "Centralized DB",
+            "B": "Distributed ledger",
+            "C": "File system",
+            "D": "Cache"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which blockchain supports smart contracts?",
+        "options": {
+            "A": "Bitcoin",
+            "B": "Ethereum",
+            "C": "Litecoin",
+            "D": "Ripple"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Smart contracts are written in?",
+        "options": {
+            "A": "Python",
+            "B": "Java",
+            "C": "Solidity",
+            "D": "C++"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Proof of Work ensures?",
+        "options": {
+            "A": "Speed",
+            "B": "Consensus",
+            "C": "Storage",
+            "D": "Privacy"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which is immutable in blockchain?",
+        "options": {
+            "A": "UI",
+            "B": "Transaction record",
+            "C": "API",
+            "D": "Wallet"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Hash provides?",
+        "options": {
+            "A": "Encryption",
+            "B": "Integrity",
+            "C": "Compression",
+            "D": "Routing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which attack is common in blockchain?",
+        "options": {
+            "A": "XSS",
+            "B": "51% attack",
+            "C": "SQL injection",
+            "D": "CSRF"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Gas fee is used in?",
+        "options": {
+            "A": "Bitcoin",
+            "B": "Ethereum",
+            "C": "Hyperledger",
+            "D": "IPFS"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Private key is used for?",
+        "options": {
+            "A": "Encryption",
+            "B": "Signing",
+            "C": "Mining",
+            "D": "Hashing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which is permissioned blockchain?",
+        "options": {
+            "A": "Ethereum",
+            "B": "Bitcoin",
+            "C": "Hyperledger",
+            "D": "Litecoin"
+        },
+        "correct_answer": "C"
+    }
+],
+"Site Reliability Engineer (SRE)": [
+    {
+        "question": "SRE focuses on?",
+        "options": {
+            "A": "Features",
+            "B": "Reliability",
+            "C": "Design",
+            "D": "Testing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SLA stands for?",
+        "options": {
+            "A": "Service Level Agreement",
+            "B": "System Load Analysis",
+            "C": "Software Logic App",
+            "D": "Service Log Access"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "MTTR means?",
+        "options": {
+            "A": "Mean Time To Recover",
+            "B": "Max Time To Run",
+            "C": "Memory Time Ratio",
+            "D": "Main Thread Task"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Which tool is used for monitoring?",
+        "options": {
+            "A": "Git",
+            "B": "Prometheus",
+            "C": "Docker",
+            "D": "Maven"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Error budget is related to?",
+        "options": {
+            "A": "Cost",
+            "B": "Reliability",
+            "C": "Latency",
+            "D": "Security"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which handles traffic distribution?",
+        "options": {
+            "A": "Firewall",
+            "B": "Load balancer",
+            "C": "Router",
+            "D": "Switch"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Incident response includes?",
+        "options": {
+            "A": "Blame",
+            "B": "Rollback",
+            "C": "Postmortem",
+            "D": "Ignore"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which improves availability?",
+        "options": {
+            "A": "Single server",
+            "B": "Replication",
+            "C": "Manual deploy",
+            "D": "Cron"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which metric tracks uptime?",
+        "options": {
+            "A": "Latency",
+            "B": "Availability",
+            "C": "CPU",
+            "D": "Memory"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Automation reduces?",
+        "options": {
+            "A": "Speed",
+            "B": "Errors",
+            "C": "Scalability",
+            "D": "Monitoring"
+        },
+        "correct_answer": "B"
+    }
+],
+"Frontend Framework Specialists (Angular, Vue)": [
+    {
+        "question": "Angular is maintained by?",
+        "options": {
+            "A": "Facebook",
+            "B": "Google",
+            "C": "Microsoft",
+            "D": "Amazon"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Vue is known for?",
+        "options": {
+            "A": "Complexity",
+            "B": "Simplicity",
+            "C": "Backend",
+            "D": "Database"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Angular uses which language?",
+        "options": {
+            "A": "Java",
+            "B": "TypeScript",
+            "C": "Python",
+            "D": "C#"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Component-based architecture means?",
+        "options": {
+            "A": "Monolithic",
+            "B": "Reusable UI blocks",
+            "C": "Single file",
+            "D": "Backend logic"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "State management library?",
+        "options": {
+            "A": "Redux",
+            "B": "Vuex",
+            "C": "NgRx",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "SPA stands for?",
+        "options": {
+            "A": "Single Page Application",
+            "B": "Secure Page App",
+            "C": "Server Page App",
+            "D": "Static Program App"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Routing handles?",
+        "options": {
+            "A": "API",
+            "B": "Navigation",
+            "C": "Styling",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Change detection is feature of?",
+        "options": {
+            "A": "React",
+            "B": "Angular",
+            "C": "Vue",
+            "D": "jQuery"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which improves performance?",
+        "options": {
+            "A": "Lazy loading",
+            "B": "Large bundles",
+            "C": "Inline styles",
+            "D": "Global state"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Template syntax is used for?",
+        "options": {
+            "A": "Logic",
+            "B": "Binding",
+            "C": "Routing",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    }
+],
+"ERP Developer": [
+    {
+        "question": "ERP integrates?",
+        "options": {
+            "A": "One department",
+            "B": "Multiple business processes",
+            "C": "Only finance",
+            "D": "Only HR"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Popular ERP system?",
+        "options": {
+            "A": "SAP",
+            "B": "MySQL",
+            "C": "MongoDB",
+            "D": "Linux"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "ERP module example?",
+        "options": {
+            "A": "Sales",
+            "B": "Inventory",
+            "C": "Finance",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "ERP customization is done to?",
+        "options": {
+            "A": "Reduce users",
+            "B": "Fit business needs",
+            "C": "Increase cost",
+            "D": "Remove modules"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ERP data migration refers to?",
+        "options": {
+            "A": "Backup",
+            "B": "Moving legacy data",
+            "C": "Replication",
+            "D": "Indexing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which improves workflow automation?",
+        "options": {
+            "A": "Manual steps",
+            "B": "ERP workflows",
+            "C": "Emails",
+            "D": "Spreadsheets"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ERP reporting is used for?",
+        "options": {
+            "A": "Debugging",
+            "B": "Decision making",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which role configures ERP?",
+        "options": {
+            "A": "End user",
+            "B": "Consultant",
+            "C": "Tester",
+            "D": "Admin only"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ERP reduces?",
+        "options": {
+            "A": "Efficiency",
+            "B": "Data silos",
+            "C": "Integration",
+            "D": "Automation"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ERP uses which DB?",
+        "options": {
+            "A": "Flat file",
+            "B": "Relational",
+            "C": "Text",
+            "D": "CSV"
+        },
+        "correct_answer": "B"
+    }
+],
+"Salesforce Developer": [
+    {
+        "question": "Salesforce is mainly a?",
+        "options": {
+            "A": "CRM",
+            "B": "ERP",
+            "C": "OS",
+            "D": "DB"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Apex is?",
+        "options": {
+            "A": "Query language",
+            "B": "Programming language",
+            "C": "Markup",
+            "D": "DB"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SOQL is used for?",
+        "options": {
+            "A": "UI",
+            "B": "Queries",
+            "C": "Styling",
+            "D": "Automation"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Lightning is used for?",
+        "options": {
+            "A": "Backend",
+            "B": "UI development",
+            "C": "Database",
+            "D": "Testing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Object in Salesforce represents?",
+        "options": {
+            "A": "Table",
+            "B": "Row",
+            "C": "Column",
+            "D": "Index"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Workflow automation uses?",
+        "options": {
+            "A": "Triggers",
+            "B": "Process Builder",
+            "C": "Flows",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "Which ensures security?",
+        "options": {
+            "A": "Profiles",
+            "B": "Roles",
+            "C": "Permission sets",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "Sandbox is used for?",
+        "options": {
+            "A": "Production",
+            "B": "Testing",
+            "C": "Backup",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which is cloud-based?",
+        "options": {
+            "A": "Salesforce",
+            "B": "Oracle",
+            "C": "MySQL",
+            "D": "Postgres"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Governor limits control?",
+        "options": {
+            "A": "UI",
+            "B": "Resource usage",
+            "C": "Security",
+            "D": "Routing"
+        },
+        "correct_answer": "B"
+    }
+]
+,
+"Robotics Engineer": [
+    {
+        "question": "Kinematics deals with?",
+        "options": {
+            "A": "Forces",
+            "B": "Motion",
+            "C": "Energy",
+            "D": "Power"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ROS stands for?",
+        "options": {
+            "A": "Robot Operating System",
+            "B": "Real OS",
+            "C": "Remote OS",
+            "D": "Robot Open Software"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Actuators convert?",
+        "options": {
+            "A": "Energy to motion",
+            "B": "Motion to energy",
+            "C": "Data to signal",
+            "D": "Signal to data"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Sensor provides?",
+        "options": {
+            "A": "Control",
+            "B": "Feedback",
+            "C": "Power",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Path planning finds?",
+        "options": {
+            "A": "Speed",
+            "B": "Shortest path",
+            "C": "Power",
+            "D": "Torque"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "PID controller is used for?",
+        "options": {
+            "A": "Learning",
+            "B": "Control",
+            "C": "Storage",
+            "D": "Vision"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SLAM stands for?",
+        "options": {
+            "A": "Simultaneous Localization and Mapping",
+            "B": "System Logic",
+            "C": "Sensor Mapping",
+            "D": "Signal Mapping"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Robot DOF means?",
+        "options": {
+            "A": "Direction",
+            "B": "Degree of Freedom",
+            "C": "Data flow",
+            "D": "Drive offset"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "End effector is?",
+        "options": {
+            "A": "Base",
+            "B": "Joint",
+            "C": "Tool",
+            "D": "Sensor"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "Which is used for vision?",
+        "options": {
+            "A": "Lidar",
+            "B": "Camera",
+            "C": "Encoder",
+            "D": "Motor"
+        },
+        "correct_answer": "B"
+    }
+],
+"System Analyst": [
+    {
+        "question": "Requirement gathering is part of?",
+        "options": {
+            "A": "Coding",
+            "B": "Analysis",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "UML is used for?",
+        "options": {
+            "A": "Coding",
+            "B": "Modeling",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Feasibility study checks?",
+        "options": {
+            "A": "Code",
+            "B": "Cost & viability",
+            "C": "UI",
+            "D": "DB"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Stakeholder means?",
+        "options": {
+            "A": "Developer",
+            "B": "End user",
+            "C": "Interested party",
+            "D": "Tester"
+        },
+        "correct_answer": "C"
+    },
+    {
+        "question": "SRS stands for?",
+        "options": {
+            "A": "System Requirement Specification",
+            "B": "Software Runtime System",
+            "C": "Service Resource Spec",
+            "D": "System Rule Set"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Gap analysis finds?",
+        "options": {
+            "A": "Errors",
+            "B": "Differences",
+            "C": "Bugs",
+            "D": "Costs"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Use case diagram shows?",
+        "options": {
+            "A": "Code",
+            "B": "User interaction",
+            "C": "DB",
+            "D": "Network"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Change management handles?",
+        "options": {
+            "A": "Code",
+            "B": "Requirements",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "BRD focuses on?",
+        "options": {
+            "A": "Business needs",
+            "B": "Code",
+            "C": "DB",
+            "D": "UI"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "System analyst bridges?",
+        "options": {
+            "A": "UI & DB",
+            "B": "Business & Tech",
+            "C": "Dev & QA",
+            "D": "User & DB"
+        },
+        "correct_answer": "B"
+    }
+],
+"Firmware Engineer": [
+    {
+        "question": "Firmware runs on?",
+        "options": {
+            "A": "Browser",
+            "B": "Hardware",
+            "C": "Cloud",
+            "D": "OS"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Bootloader does?",
+        "options": {
+            "A": "Load OS",
+            "B": "Compile code",
+            "C": "Debug",
+            "D": "Store data"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Firmware language?",
+        "options": {
+            "A": "Python",
+            "B": "C",
+            "C": "Java",
+            "D": "Ruby"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SPI is a?",
+        "options": {
+            "A": "Protocol",
+            "B": "Memory",
+            "C": "OS",
+            "D": "Compiler"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Interrupt latency means?",
+        "options": {
+            "A": "Delay",
+            "B": "Speed",
+            "C": "Clock",
+            "D": "Cache"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Firmware update uses?",
+        "options": {
+            "A": "OTA",
+            "B": "FTP",
+            "C": "SMTP",
+            "D": "HTTP only"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Flash memory is?",
+        "options": {
+            "A": "Volatile",
+            "B": "Non-volatile",
+            "C": "Cache",
+            "D": "Register"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Low-level drivers interact with?",
+        "options": {
+            "A": "UI",
+            "B": "Hardware",
+            "C": "Cloud",
+            "D": "API"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Bare-metal firmware means?",
+        "options": {
+            "A": "With OS",
+            "B": "No OS",
+            "C": "Virtual",
+            "D": "Cloud"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Firmware debugging uses?",
+        "options": {
+            "A": "JTAG",
+            "B": "WiFi",
+            "C": "USB",
+            "D": "HDMI"
+        },
+        "correct_answer": "A"
+    }
+],
+"AR/VR Developer": [
+    {
+        "question": "AR overlays?",
+        "options": {
+            "A": "Virtual world",
+            "B": "Real world",
+            "C": "Code",
+            "D": "Network"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "VR creates?",
+        "options": {
+            "A": "Overlay",
+            "B": "Immersive environment",
+            "C": "2D UI",
+            "D": "API"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which engine used?",
+        "options": {
+            "A": "Unity",
+            "B": "Flask",
+            "C": "Spring",
+            "D": "Django"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "3D rendering uses?",
+        "options": {
+            "A": "CPU only",
+            "B": "GPU",
+            "C": "RAM",
+            "D": "Disk"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Head tracking improves?",
+        "options": {
+            "A": "Latency",
+            "B": "Immersion",
+            "C": "Memory",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which device used for VR?",
+        "options": {
+            "A": "Monitor",
+            "B": "VR headset",
+            "C": "Keyboard",
+            "D": "Printer"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "AR uses which sensor?",
+        "options": {
+            "A": "GPS",
+            "B": "Camera",
+            "C": "Printer",
+            "D": "Speaker"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "FPS in VR should be?",
+        "options": {
+            "A": "Low",
+            "B": "High",
+            "C": "Variable",
+            "D": "Zero"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which improves realism?",
+        "options": {
+            "A": "Lighting",
+            "B": "Textures",
+            "C": "Physics",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "Latency affects?",
+        "options": {
+            "A": "Storage",
+            "B": "Motion sickness",
+            "C": "Security",
+            "D": "Cost"
+        },
+        "correct_answer": "B"
+    }
+],
+"Test Automation Engineer": [
+    {
+        "question": "Automation reduces?",
+        "options": {
+            "A": "Accuracy",
+            "B": "Time",
+            "C": "Coverage",
+            "D": "Quality"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Selenium automates?",
+        "options": {
+            "A": "DB",
+            "B": "Web UI",
+            "C": "API only",
+            "D": "OS"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "CI/CD integrates?",
+        "options": {
+            "A": "Testing",
+            "B": "Automation",
+            "C": "Deployment",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "Flaky tests are?",
+        "options": {
+            "A": "Stable",
+            "B": "Unreliable",
+            "C": "Fast",
+            "D": "Secure"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which tool for API tests?",
+        "options": {
+            "A": "Postman",
+            "B": "Figma",
+            "C": "Jira",
+            "D": "Slack"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Test scripts should be?",
+        "options": {
+            "A": "Hardcoded",
+            "B": "Reusable",
+            "C": "Manual",
+            "D": "Static"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Assertion validates?",
+        "options": {
+            "A": "Logic",
+            "B": "Expected result",
+            "C": "UI",
+            "D": "Flow"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which runs tests automatically?",
+        "options": {
+            "A": "Scheduler",
+            "B": "CI pipeline",
+            "C": "Editor",
+            "D": "Browser"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which language used?",
+        "options": {
+            "A": "Only Java",
+            "B": "Python/Java",
+            "C": "C",
+            "D": "PHP"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Automation best for?",
+        "options": {
+            "A": "Exploratory",
+            "B": "Regression",
+            "C": "Adhoc",
+            "D": "UI design"
+        },
+        "correct_answer": "B"
+    }
+],
+"Business Intelligence Developer": [
+    {
+        "question": "BI helps in?",
+        "options": {
+            "A": "Coding",
+            "B": "Decision making",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "OLAP is used for?",
+        "options": {
+            "A": "Transactions",
+            "B": "Analytics",
+            "C": "Storage",
+            "D": "Backup"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Power BI is a?",
+        "options": {
+            "A": "DB",
+            "B": "BI tool",
+            "C": "OS",
+            "D": "API"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Dashboard shows?",
+        "options": {
+            "A": "Raw data",
+            "B": "Insights",
+            "C": "Logs",
+            "D": "Errors"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "ETL stands for?",
+        "options": {
+            "A": "Extract Transform Load",
+            "B": "Encode Transfer Load",
+            "C": "Enter Test Logic",
+            "D": "Export Table List"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Data warehouse stores?",
+        "options": {
+            "A": "Current data",
+            "B": "Historical data",
+            "C": "Cache",
+            "D": "Logs"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Star schema has?",
+        "options": {
+            "A": "Many facts",
+            "B": "One fact",
+            "C": "No dimension",
+            "D": "No tables"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "BI performance depends on?",
+        "options": {
+            "A": "Indexes",
+            "B": "Modeling",
+            "C": "Queries",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "Visualization improves?",
+        "options": {
+            "A": "Confusion",
+            "B": "Understanding",
+            "C": "Latency",
+            "D": "Cost"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "KPI means?",
+        "options": {
+            "A": "Key Performance Indicator",
+            "B": "Known Process Index",
+            "C": "Key Program Input",
+            "D": "Kernel Process Info"
+        },
+        "correct_answer": "A"
+    }
+],
+"API Developer": [
+    {
+        "question": "REST uses which protocol?",
+        "options": {
+            "A": "FTP",
+            "B": "HTTP",
+            "C": "SMTP",
+            "D": "SSH"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "GET method is used to?",
+        "options": {
+            "A": "Create",
+            "B": "Read",
+            "C": "Update",
+            "D": "Delete"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "POST method is used to?",
+        "options": {
+            "A": "Read",
+            "B": "Create",
+            "C": "Delete",
+            "D": "Fetch"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Status code 200 means?",
+        "options": {
+            "A": "Error",
+            "B": "Success",
+            "C": "Redirect",
+            "D": "Unauthorized"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Authentication ensures?",
+        "options": {
+            "A": "Speed",
+            "B": "Identity",
+            "C": "Caching",
+            "D": "Routing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Token-based auth uses?",
+        "options": {
+            "A": "JWT",
+            "B": "Cookie",
+            "C": "Session",
+            "D": "Cache"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "API versioning avoids?",
+        "options": {
+            "A": "Errors",
+            "B": "Breaking changes",
+            "C": "Latency",
+            "D": "Security"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Rate limiting prevents?",
+        "options": {
+            "A": "Caching",
+            "B": "Abuse",
+            "C": "Auth",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Swagger is used for?",
+        "options": {
+            "A": "Testing",
+            "B": "Documentation",
+            "C": "Deployment",
+            "D": "Security"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Idempotent method?",
+        "options": {
+            "A": "POST",
+            "B": "GET",
+            "C": "PATCH",
+            "D": "CONNECT"
+        },
+        "correct_answer": "B"
+    }
+],
+"SAP Consultant": [
+    {
+        "question": "SAP is mainly?",
+        "options": {
+            "A": "CRM",
+            "B": "ERP",
+            "C": "OS",
+            "D": "DB"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SAP module FI relates to?",
+        "options": {
+            "A": "Sales",
+            "B": "Finance",
+            "C": "HR",
+            "D": "Logistics"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SAP MM handles?",
+        "options": {
+            "A": "Manufacturing",
+            "B": "Materials",
+            "C": "Marketing",
+            "D": "Management"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Customization uses?",
+        "options": {
+            "A": "Coding only",
+            "B": "Configuration",
+            "C": "Testing",
+            "D": "Deployment"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SAP transport moves?",
+        "options": {
+            "A": "Data",
+            "B": "Config",
+            "C": "Code",
+            "D": "All"
+        },
+        "correct_answer": "D"
+    },
+    {
+        "question": "SAP reports used for?",
+        "options": {
+            "A": "Debug",
+            "B": "Business insight",
+            "C": "Testing",
+            "D": "Security"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SAP HANA is?",
+        "options": {
+            "A": "Disk DB",
+            "B": "In-memory DB",
+            "C": "File system",
+            "D": "Cache"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "IDOC used for?",
+        "options": {
+            "A": "UI",
+            "B": "Integration",
+            "C": "Testing",
+            "D": "Storage"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Client in SAP means?",
+        "options": {
+            "A": "User",
+            "B": "Environment",
+            "C": "Server",
+            "D": "Module"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "SAP implementation phase starts with?",
+        "options": {
+            "A": "Testing",
+            "B": "Blueprint",
+            "C": "Deployment",
+            "D": "Support"
+        },
+        "correct_answer": "B"
+    }
+],
+"Site Architect (Web Applications)": [
+    {
+        "question": "Scalability means?",
+        "options": {
+            "A": "Speed",
+            "B": "Growth handling",
+            "C": "Security",
+            "D": "UI"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Microservices improve?",
+        "options": {
+            "A": "Coupling",
+            "B": "Scalability",
+            "C": "Complexity",
+            "D": "Latency"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "API gateway handles?",
+        "options": {
+            "A": "UI",
+            "B": "Routing",
+            "C": "DB",
+            "D": "Cache"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Caching improves?",
+        "options": {
+            "A": "Security",
+            "B": "Performance",
+            "C": "Cost",
+            "D": "Testing"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Load balancer distributes?",
+        "options": {
+            "A": "Storage",
+            "B": "Traffic",
+            "C": "Memory",
+            "D": "CPU"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Stateless services help?",
+        "options": {
+            "A": "Scaling",
+            "B": "Security",
+            "C": "UI",
+            "D": "Testing"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Auth is commonly done using?",
+        "options": {
+            "A": "JWT",
+            "B": "CSS",
+            "C": "HTML",
+            "D": "DNS"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Monolith vs microservices differ in?",
+        "options": {
+            "A": "Language",
+            "B": "Deployment",
+            "C": "DB",
+            "D": "UI"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "High availability needs?",
+        "options": {
+            "A": "Single node",
+            "B": "Redundancy",
+            "C": "Manual deploy",
+            "D": "Cron"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Architecture design focuses on?",
+        "options": {
+            "A": "Code",
+            "B": "System structure",
+            "C": "UI",
+            "D": "Testing"
+        },
+        "correct_answer": "B"
+    }
+],
+"Python Automation Engineer": [
+    {
+        "question": "Automation uses Python for?",
+        "options": {
+            "A": "Manual work",
+            "B": "Task automation",
+            "C": "UI design",
+            "D": "DB admin"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Selenium automates?",
+        "options": {
+            "A": "Files",
+            "B": "Browser",
+            "C": "DB",
+            "D": "API only"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Requests library is used for?",
+        "options": {
+            "A": "UI",
+            "B": "HTTP calls",
+            "C": "DB",
+            "D": "Files"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Scheduler example?",
+        "options": {
+            "A": "Cron",
+            "B": "Flask",
+            "C": "Django",
+            "D": "FastAPI"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Exception handling avoids?",
+        "options": {
+            "A": "Logic",
+            "B": "Crash",
+            "C": "Speed",
+            "D": "Memory"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Reusable code means?",
+        "options": {
+            "A": "Hardcoded",
+            "B": "Modular",
+            "C": "Static",
+            "D": "Inline"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Automation logs help in?",
+        "options": {
+            "A": "UI",
+            "B": "Debugging",
+            "C": "Design",
+            "D": "Security"
+        },
+        "correct_answer": "B"
+    },
+    {
+        "question": "Which is RPA?",
+        "options": {
+            "A": "UiPath",
+            "B": "React",
+            "C": "Redis",
+            "D": "RabbitMQ"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Headless browser means?",
+        "options": {
+            "A": "No UI",
+            "B": "Fast",
+            "C": "Secure",
+            "D": "Local"
+        },
+        "correct_answer": "A"
+    },
+    {
+        "question": "Python automation improves?",
+        "options": {
+            "A": "Errors",
+            "B": "Efficiency",
+            "C": "Cost",
+            "D": "Risk"
+        },
+        "correct_answer": "B"
+    }
+]
+}

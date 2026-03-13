@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        <div class="glass-card floating-card">
+
+            <div class="card-body p-5 text-center">
+
+            
+                <h1 class="display-4 fw-bold gradient-text mb-3">
+                    Shabamorix Hire Interview Preparation Assistant
+                </h1>
+                <p class="lead fs-4" style="color: var(--text-light);">
+                    Prepare for your next job interview with AI-powered practice sessions
+                </p>
+
+                {% if not resume_uploaded %}
+                
+                <div class="upload-section mt-5 p-4 rounded-4">
+                    <div class="upload-icon mb-3">
+                        <i class="fas fa-file-upload fa-3x"></i>
+                    </div>
+
+                    <h3 class="fw-bold">Get Started</h3>
+                    <p class="fs-5" style="color: var(--text-light);">
+                        Upload your resume to begin personalized interview practice
+                    </p>
+
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="resume" name="resume" class="form-control form-control-lg my-4"
+                            accept=".pdf,.docx,.txt" required />
+
+                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 upload-btn">
+                            <i class="fas fa-upload me-2"></i>Upload Resume & Analyze
+                        </button>
+                    </form>
+
+                    <div id="uploadResult" class="mt-4"></div>
+                </div>
+
+                {% else %}
+                
+                <div class="ready-section mt-5 p-4 rounded-4">
+                    <i class="fas fa-check-circle fa-3x ready-icon mb-3"></i>
+                    <h3 class="fw-bold">Ready for Interview!</h3>
+                    <p style="color: var(--text-light);" class="fs-5">
+                        Your resume has been analyzed successfully
+                    </p>
+
+                    <a href="{{ url_for('interview') }}" class="btn btn-success btn-lg px-5 py-3 start-btn">
+                        <i class="fas fa-play-circle me-2"></i>Start Interview Session
+                    </a>
+                </div>
+                {% endif %}
+
+            
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h5 class="fw-bold">AI-Powered Questions</h5>
+                            <p style="color: var(--text-light);">
+                                Personalized questions based on your resume
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <div class="feature-icon alt mb-3">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h5 class="fw-bold">Emotion Analysis</h5>
+                            <p style="color: var(--text-light);">
+                                Confidence & emotion tracking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 h-100">
+                            <div class="feature-icon green mb-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="fw-bold">Performance Analytics</h5>
+                            <p style="color: var(--text-light);">
+                                ATS score, feedback & insights
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    .glass-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px var(--shadow-color);
+    }
+
+    .upload-section {
+        background: rgba(93, 135, 255, 0.08);
+        border: 2px dashed var(--primary-color);
+    }
+
+    .ready-section {
+        background: rgba(34, 197, 94, 0.12);
+        border: 2px solid #22c55e;
+    }
+
+    .upload-icon {
+        color: var(--primary-color);
+    }
+
+    .ready-icon {
+        color: #22c55e;
+    }
+
+    .upload-btn {
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+        border: none;
+        border-radius: 14px;
+        font-weight: 600;
+    }
+
+    .start-btn {
+        border-radius: 14px;
+        font-weight: 600;
+    }
+
+    .feature-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg,
+                var(--primary-color),
+                var(--secondary-color));
+    }
+
+    .feature-icon.alt {
+        background: linear-gradient(135deg, #ec4899, #f43f5e);
+    }
+
+    .feature-icon.green {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+
+    input[type="file"] {
+        background: var(--gray-50);
+        color: var(--text-dark);
+        border: 2px solid var(--primary-color);
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.getElementById("uploadForm")?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const file = document.getElementById("resume").files[0];
+        if (!file) return;
+
+        const resultDiv = document.getElementById("uploadResult");
+        resultDiv.innerHTML = `
+    <div class="glass-card p-4 text-start">
+      <strong>Analyzing resume…</strong>
+      <p style="color: var(--text-light);">AI is extracting skills and generating questions</p>
+    </div>
+  `;
+
+        const formData = new FormData();
+        formData.append("resume", file);
+
+        const res = await fetch("/upload_resume", { method: "POST", body: formData });
+        const data = await res.json();
+
+        if (!data.success) {
+            resultDiv.innerHTML = `<p style="color:#ef4444;">${data.error}</p>`;
+            return;
+        }
+
+        resultDiv.innerHTML = `
+    <div class="glass-card p-4 text-start mt-4">
+      <h4 class="fw-bold">Resume Analysis Complete</h4>
+      <p><strong>🎯 Role:</strong> ${data.role}</p>
+      <p><strong>📊 ATS Score:</strong> ${data.ats_score}%</p>
+      <p><strong>🛠️ Skills:</strong> ${data.matched_skills}</p>
+      <p><strong>❓ Questions:</strong> ${data.questions_count}</p>
+
+      <h5 class="mt-3">📄 AI Feedback</h5>
+      <ul>
+        ${data.resume_feedback.map(p => `<li>${p}</li>`).join("")}
+      </ul>
+
+      <div class="text-center mt-4">
+        <a href="/self_intro" class="btn btn-primary btn-lg px-5">
+          <i class="fas fa-video me-2"></i>Start Self Introduction
+        </a>
+      </div>
+    </div>
+  `;
+    });
+</script>
+{% endblock %}

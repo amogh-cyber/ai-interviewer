@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .practice-section {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.section-header h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+}
+
+.section-header p {
+    color: var(--text-light);
+}
+
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 0 15px;
+}
+
+
+.premium-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.role-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+
+.btn-start {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+.badge-premium {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--gray-100);
+    color: var(--text-light);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+</style>
+
+<div class="practice-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="page-title text-center">Aptitude Practice</h2>
+            <p class="text-muted text-center">Select your target role to begin your assessment.</p>
+        </div>
+
+        <div class="role-grid">
+            {% for r in roles %}
+            <div class="premium-card">
+                <h3 class="role-title">{{ r.title }}</h3>
+            
+                <a href="{{ url_for('start_aptitude', slug=r.slug) }}" class="btn-start">
+                    Start Assessment
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
