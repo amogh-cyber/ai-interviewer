@@ -1,22 +1,44 @@
 import os
 import csv
-import cv2
 import re
-import torch
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-from deepface import DeepFace
 from PIL import Image
 from PyPDF2 import PdfReader
 from docx import Document
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 import json
 import base64
 import io
 import sqlite3
 import random
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+try:
+    import cv2
+except Exception as e:
+    print(f"[WARNING] cv2 import failed: {e}")
+    cv2 = None
+
+try:
+    import torch
+except Exception as e:
+    print(f"[WARNING] torch import failed: {e}")
+    torch = None
+
+try:
+    from deepface import DeepFace
+except Exception as e:
+    print(f"[WARNING] DeepFace import failed: {e}")
+    DeepFace = None
+
+try:
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
+except Exception as e:
+    print(f"[WARNING] transformers import failed: {e}")
+    AutoModelForSeq2SeqLM = AutoTokenizer = pipeline = None
 
 from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -100,7 +122,13 @@ except Exception as e:
 # Global Variables
 # ---------------------------------------------------------------
 ALLOWED_EXTENSIONS = {'pdf', 'txt', 'docx'}
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+if cv2 and hasattr(cv2, 'data') and hasattr(cv2.data, 'haarcascades'):
+    try:
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    except Exception:
+        face_cascade = None
+else:
+    face_cascade = None
 
 # ---------------------------------------------------------------
 # Role Keyword Dictionary
@@ -147,7 +175,7 @@ ROLE_KEYWORDS = {
 
 
 try:
-    with open("questions.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(BASE_DIR, "questions.json"), "r", encoding="utf-8") as f:
         ROLE_QUESTIONS = json.load(f)
     
 except Exception as e:
@@ -155,7 +183,7 @@ except Exception as e:
     ROLE_QUESTIONS = {}
 
 try:
-    with open("answer.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(BASE_DIR, "answer.json"), "r", encoding="utf-8") as f:
         ROLE_ANSWERS = json.load(f)
     
 except Exception as e:
@@ -568,8 +596,12 @@ def logout():
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
 
-with open("./models/flan-t5-small/resume_feedback.json", "r", encoding="utf-8") as f:
-    RESUME_FEEDBACK = json.load(f)
+try:
+    with open(os.path.join(BASE_DIR, "models", "flan-t5-small", "resume_feedback.json"), "r", encoding="utf-8") as f:
+        RESUME_FEEDBACK = json.load(f)
+except Exception as e:
+    print(f"[WARNING] Could not load resume_feedback.json: {e}")
+    RESUME_FEEDBACK = {}
 
 
 def generate_resume_feedback_rule_based(role, ats_score, matched_skills):
@@ -1128,8 +1160,12 @@ def interview_details(result_id):
 
 
 
-with open("aptitude_questions.json", "r", encoding="utf-8") as f:
-    APTITUDE = json.load(f)
+try:
+    with open(os.path.join(BASE_DIR, "aptitude_questions.json"), "r", encoding="utf-8") as f:
+        APTITUDE = json.load(f)
+except Exception as e:
+    print(f"[WARNING] Could not load aptitude_questions.json: {e}")
+    APTITUDE = {}
 
 
 import re
