@@ -80,18 +80,20 @@ def update_db_schema():
 
 checkpoint = "google/flan-t5-small"
 
-tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
-
-device = "cuda" if torch.cuda.is_available() else "cpu"
-model.to(device)
-
-generator = pipeline(
-    "text2text-generation",
-    model=model,
-    tokenizer=tokenizer,
-    device=0 if device == "cuda" else -1
-)
+try:
+    tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+    generator = pipeline(
+        "text2text-generation",
+        model=model,
+        tokenizer=tokenizer,
+        device=0 if device == "cuda" else -1
+    )
+except Exception as e:
+    print(f"[WARNING] Transformer model initialization skipped: {e}")
+    generator = None
 
 
 # ---------------------------------------------------------------
@@ -308,6 +310,15 @@ def get_feedback_based_on_score(score, similarity):
 
 
 DB_NAME = "interview.db"
+if os.environ.get("VERCEL"):
+    import shutil
+    tmp_db = "/tmp/interview.db"
+    if not os.path.exists(tmp_db) and os.path.exists(DB_NAME):
+        try:
+            shutil.copyfile(DB_NAME, tmp_db)
+        except Exception:
+            pass
+    DB_NAME = tmp_db
 
 # ---------------------------------------------------------------
 # User Management 
@@ -1422,4 +1433,4 @@ def on_ice_candidate(data):
 # Main Application
 # ---------------------------------------------------------------
 if __name__ == '__main__':
-    socketio.run(app, host="0.0.0.0", port=5000, debug=False)
+    socketio.run(app, host="0.0.0.0", port=5000, debug=True, allow_unsafe_werkzeug=True)
