@@ -1,38 +1,127 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid px-4 px-lg-5 pt-2">
+<div class="container-fluid px-3 px-lg-4 pt-2">
 
+    <!-- Top Hero + Login Section (Immediately visible above the fold without scrolling) -->
+    <div class="row align-items-center justify-content-between g-4 mb-5">
 
-   <div class="container">
-    <div class="row align-items-center">
+        <!-- Left Column: Branding, Value Prop & Features -->
+        <div class="col-lg-7 col-xl-7">
+            <div class="pe-lg-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="{{ url_for('static', filename='images/shabamorix-logo.jpeg') }}"
+                         alt="Shabamorix Hire Logo"
+                         class="rounded-circle shadow-sm"
+                         style="width: 65px; height: 65px; object-fit: cover; border: 2px solid var(--primary-color);">
+                    <div>
+                        <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold text-uppercase">AI Interview Platform</span>
+                    </div>
+                </div>
 
-        <div class="col-md-6">
-            <h3 class="hero-title fw-black mb-5">
-                <span class="gradient-text-animated hero-brand">Welcome to</span><br>
-                <span class="gradient-text-animated hero-brand">Shabamorix Hire</span><br>
-                <span class="gradient-text-animated hero-brand">AI-Powered Virtual Interview</span>
-            </h3>
+                <h1 class="hero-title fw-black mb-3">
+                    <span class="gradient-text hero-brand d-block">Shabamorix Hire</span>
+                    <span class="fs-2 fw-bold" style="color: var(--text-dark);">AI-Powered Virtual Interview Assistant</span>
+                </h1>
+
+                <p class="lead mb-4" style="color: var(--text-light); font-size: 1.15rem; line-height: 1.6;">
+                    Supercharge your hiring preparation with real-time AI evaluation, automated resume ATS analysis, dynamic role-specific questions, and emotion-aware interview feedback.
+                </p>
+
+                <!-- Quick Highlights -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-4">
+                        <div class="p-3 rounded-3 h-100" style="background: rgba(93, 135, 255, 0.08); border-left: 3px solid var(--primary-color);">
+                            <div class="fw-bold mb-1" style="color: var(--text-dark);"><i class="fas fa-file-invoice me-1 text-primary"></i> Resume ATS</div>
+                            <small style="color: var(--text-light);">Instant skill matching & scoring</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-3 rounded-3 h-100" style="background: rgba(38, 198, 249, 0.08); border-left: 3px solid var(--secondary-color);">
+                            <div class="fw-bold mb-1" style="color: var(--text-dark);"><i class="fas fa-robot me-1 text-info"></i> AI Questions</div>
+                            <small style="color: var(--text-light);">Tailored to your background</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-3 rounded-3 h-100" style="background: rgba(34, 197, 94, 0.08); border-left: 3px solid #22c55e;">
+                            <div class="fw-bold mb-1" style="color: var(--text-dark);"><i class="fas fa-smile me-1 text-success"></i> Emotion AI</div>
+                            <small style="color: var(--text-light);">Confidence & facial feedback</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-6 text-center">
-            <img src="{{ url_for('static', filename='images/shabamorix-logo.jpeg') }}"
-                 alt="Shabamorix Hire"
-                 class="img-fluid"
-                 width="300">
+        <!-- Right Column: LOGIN FORM (Prominently placed at the top) -->
+        <div class="col-lg-5 col-xl-5">
+            <div class="premium-login-card p-4 p-md-5">
+
+                <div class="text-center mb-4">
+                    <div class="login-icon mb-3 mx-auto">
+                        <i class="fas fa-user-shield fs-1 text-primary"></i>
+                    </div>
+                    <h2 class="fw-bold mb-1" style="color: var(--text-dark);">Sign In</h2>
+                    <p style="color: var(--text-light);" class="small">Enter your credentials to access your interview dashboard</p>
+                </div>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
+                            Username
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-end-0" style="border-color: var(--border-color);">
+                                <i class="fas fa-user text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg border-start-0 ps-0" name="username" placeholder="Enter your username" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
+                            Password
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-end-0" style="border-color: var(--border-color);">
+                                <i class="fas fa-lock text-muted"></i>
+                            </span>
+                            <input type="password" class="form-control form-control-lg border-start-0 border-end-0 ps-0" id="password" name="password" placeholder="••••••••" required>
+                            <button type="button" class="btn border-start-0 bg-transparent" id="togglePassword" style="border-color: var(--border-color);">
+                                <i class="fas fa-eye text-muted"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold hover-lift mb-3 shadow">
+                        <i class="fas fa-sign-in-alt me-2"></i> SIGN IN
+                    </button>
+
+                    <div class="text-center pt-2">
+                        <span style="color: var(--text-light);" class="small">Don't have an account?</span>
+                        <a href="{{ url_for('register') }}" class="fw-bold ms-1 text-decoration-none">Create Account</a>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
 
     </div>
-</div>
 
+    <!-- Divider -->
+    <hr class="my-5" style="border-color: var(--border-color); opacity: 0.5;">
 
-
+    <!-- About Section -->
     <div class="row justify-content-center mb-5">
-        <div class="col-lg-11 col-xl-10">
-            <div class="premium-card p-5 border-start border-4 border-primary">
-                <h3 class="h3 fw-bold mb-3" style="color: var(--text-dark);">
-                    About Shabamorix Hire
-                </h3>
+        <div class="col-12">
+            <div class="premium-card p-4 p-md-5 border-start border-4 border-primary">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <i class="fas fa-info-circle fs-3 text-primary"></i>
+                    <h3 class="h4 fw-bold mb-0" style="color: var(--text-dark);">
+                        About Shabamorix Hire
+                    </h3>
+                </div>
                 <p class="lh-lg mb-0" style="color: var(--text-light); font-size: 1.05rem;">
                     Shabamorix Hire is an AI-powered recruitment assistance platform designed
                     to simulate real-world hiring environments. The platform helps candidates
@@ -43,18 +132,18 @@
         </div>
     </div>
 
-
+    <!-- Contact Team Section -->
     <div class="row justify-content-center mb-5">
-        <div class="col-lg-11 col-xl-10">
+        <div class="col-12">
             <div class="text-center mb-4">
-                <h3 class="h3 fw-bold" style="color: var(--text-dark);">Contact</h3>
+                <h3 class="h4 fw-bold" style="color: var(--text-dark);">Project Team & Contact</h3>
+                <p class="text-muted small">Connect with the creators of Shabamorix Hire</p>
             </div>
 
             <div class="row g-4">
-
-
                 <div class="col-md-4">
                     <div class="premium-card p-4 h-100 border-start border-4 border-primary text-center">
+                        <div class="mb-2"><i class="fas fa-user-circle fs-2 text-primary"></i></div>
                         <p class="team-name">Shreyas Pralhad Joshi</p>
                         <p class="team-meta">📞 +91 81236 36969</p>
                         <p class="team-email">✉️ shreyaspralhadjoshi@gmail.com</p>
@@ -63,6 +152,7 @@
 
                 <div class="col-md-4">
                     <div class="premium-card p-4 h-100 border-start border-4 border-warning text-center">
+                        <div class="mb-2"><i class="fas fa-user-circle fs-2 text-warning"></i></div>
                         <p class="team-name">Amogh H. L.</p>
                         <p class="team-meta">📞 +91 93804 60538</p>
                         <p class="team-email">✉️ amoghlkanth@gmail.com</p>
@@ -71,84 +161,27 @@
 
                 <div class="col-md-4">
                     <div class="premium-card p-4 h-100 border-start border-4 border-success text-center">
+                        <div class="mb-2"><i class="fas fa-user-circle fs-2 text-success"></i></div>
                         <p class="team-name">Abhishek S</p>
                         <p class="team-meta">📞 +91 94497 61756</p>
                         <p class="team-email">✉️ abhishek.sram25@gmail.com</p>
                     </div>
                 </div>
-
-
-            </div>
-        </div>
-
-    </div>
-    <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 col-xl-5">
-            <div class="premium-login-card p-5">
-
-                <div class="text-center mb-4">
-                    <div class="login-icon mb-3 mx-auto">
-                        <i class="fas fa-user-shield fs-1 text-primary"></i>
-                    </div>
-                    <h2 class="fw-bold" style="color: var(--text-dark);">Welcome Back</h2>
-                    <p style="color: var(--text-light);">Sign in to your dashboard</p>
-                </div>
-
-                <form method="POST">
-
-                    <div class="mb-4">
-                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
-                            Username
-                        </label>
-                        <input type="text" class="form-control" name="username" placeholder="Enter your username"
-                            required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="small fw-bold text-uppercase mb-2" style="color: var(--text-light);">
-                            Password
-                        </label>
-                        <div class="input-group">
-                            <input type="password" class="form-control border-end-0" id="password" name="password"
-                                placeholder="••••••••" required>
-                            <button type="button" class="btn border-start-0" id="togglePassword">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold hover-lift">
-                        <i class="fas fa-sign-in-alt me-2"></i>
-                        SIGN IN
-                    </button>
-
-                </form>
-
             </div>
         </div>
     </div>
 
 </div>
 
-
 <style>
     .hero-title {
-        line-height: 1.1;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-        color: var(--text-light);
+        line-height: 1.15;
     }
 
     .hero-brand {
-        font-size: 3.6rem;
+        font-size: 3.2rem;
         font-weight: 900;
-    }
-
-    .hero-tagline {
-        font-size: 1.25rem;
-        color: var(--text-dark);
+        letter-spacing: -0.5px;
     }
 
     .team-name {
@@ -170,32 +203,39 @@
         color: var(--text-light);
     }
 
-    .team-name {
-        font-weight: 700;
-        font-size: 1.05rem;
-        margin-bottom: 6px;
-        color: var(--text-dark);
-    }
-
-    .team-contact,
-    .team-email {
-        font-size: 0.95rem;
-        color: var(--text-light);
-    }
-
     .premium-card,
     .premium-login-card {
         background: var(--card-bg);
         border: 1px solid var(--border-color);
         border-radius: 20px;
-        box-shadow: 0 20px 40px var(--shadow-color);
+        box-shadow: 0 15px 35px var(--shadow-color);
+        backdrop-filter: blur(10px);
+    }
+
+    .login-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: rgba(93, 135, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 
 <script>
     document.getElementById('togglePassword')?.addEventListener('click', () => {
         const input = document.getElementById('password');
-        input.type = input.type === 'password' ? 'text' : 'password';
+        const icon = document.querySelector('#togglePassword i');
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
     });
 </script>
 
